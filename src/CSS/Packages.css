@@ -1,0 +1,1824 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* ==========================================
+   1. GLOBAL
+========================================== */
+
+.package-page {
+  --package-pink: #ff477e;
+  --package-text: #171717;
+  --package-muted: #777777;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  color: var(--package-text);
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.package-page *,
+.package-page *::before,
+.package-page *::after {
+  box-sizing: border-box;
+}
+
+.package-page button,
+.package-page select {
+  font-family: inherit;
+}
+
+.package-page button {
+  cursor: pointer;
+}
+
+.package-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.package-page button:focus-visible,
+.package-page select:focus-visible {
+  outline: 2px solid #b72559;
+  outline-offset: 3px;
+}
+
+/* ==========================================
+   2. HERO BANNER
+========================================== */
+
+.package-hero {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 3.4 / 1;
+  min-height: 260px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  overflow: hidden;
+}
+
+.package-hero-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* HERO LEFT CONTENT */
+
+.package-hero-content {
+  position: absolute;
+  z-index: 2;
+
+  left: 10%;
+  top: 18%;
+
+  width: 38%;
+  max-width: 430px;
+  min-width: 0;
+
+  text-align: left;
+}
+
+.package-small-title {
+  display: block;
+
+  color: var(--package-pink);
+  font-size: clamp(12px, 1.4vw, 18px);
+  font-weight: 600;
+  line-height: 1.4;
+
+  margin-bottom: 5px;
+}
+
+.package-hero-content h1 {
+  color: #111111;
+
+  font-size: clamp(20px, 2.5vw, 33px);
+  font-weight: 700;
+  line-height: 1.2;
+
+  margin: 0 0 10px;
+}
+
+.package-hero-content p {
+  color: #555555;
+
+  font-size: clamp(10px, 0.9vw, 12px);
+  line-height: 1.5;
+
+  max-width: 370px;
+  margin: 0;
+}
+
+/* ==========================================
+   3. HERO DECORATION
+========================================== */
+
+.package-dream-text {
+  position: absolute;
+  z-index: 3;
+
+  left: 48%;
+  top: 28%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: rotate(-15deg);
+
+  color: var(--package-pink);
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: clamp(12px, 1.4vw, 19px);
+  line-height: 1.05;
+
+  pointer-events: none;
+}
+
+.package-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.package-dream-text svg {
+  margin-top: 5px;
+}
+
+/* ==========================================
+   4. HERO FEATURES
+========================================== */
+
+.package-hero-features {
+  position: absolute;
+  z-index: 3;
+
+  left: 10%;
+  bottom: 11%;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 15px 24px;
+  max-width: 74%;
+}
+
+.package-feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  min-width: 0;
+}
+
+.package-feature > svg {
+  width: 26px;
+  height: 26px;
+
+  flex-shrink: 0;
+  color: var(--package-pink);
+}
+
+.package-feature h4 {
+  color: #111111;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+  white-space: nowrap;
+
+  margin: 0 0 2px;
+}
+
+.package-feature p {
+  color: #888888;
+
+  font-size: 9px;
+  line-height: 1.3;
+  white-space: nowrap;
+
+  margin: 0;
+}
+
+/* ==========================================
+   5. PACKAGE FILTER BAR
+========================================== */
+
+.package-filter-section {
+  width: 100%;
+  padding: 40px 0 30px;
+
+  background: #ffffff;
+}
+
+.package-filter-container {
+  width: min(1150px, 94%);
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 22px;
+}
+
+.package-filter-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-width: 0;
+  width: 205px;
+  flex: 1 1 0;
+
+  padding: 12px 15px;
+
+  background: #ffffe9;
+  border-radius: 9px;
+}
+
+.package-filter-box > svg:first-child {
+  color: var(--package-pink);
+  flex-shrink: 0;
+}
+
+.package-filter-field {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+  min-width: 0;
+}
+
+.package-filter-field label {
+  color: #777777;
+
+  font-size: 10px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.package-filter-field select {
+  width: 100%;
+  min-width: 0;
+
+  padding: 0;
+  border: none;
+  outline-offset: 2px;
+  appearance: none;
+
+  background: transparent;
+  color: #171717;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+
+  cursor: pointer;
+}
+
+.package-filter-chevron {
+  color: #222222;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.package-view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  min-height: 42px;
+  padding: 13px 20px;
+
+  border: none;
+  border-radius: 24px;
+
+  background: var(--package-pink);
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  flex-shrink: 0;
+}
+
+.package-view-btn:hover {
+  background: #e9316b;
+}
+
+/* ==========================================
+   6. PACKAGE SIZE SECTIONS
+========================================== */
+
+.package-sections {
+  width: min(1200px, 96%);
+  margin: 0 auto;
+  padding: 0 0 35px;
+}
+
+.package-size-section {
+  width: 100%;
+
+  border-radius: 16px;
+
+  padding: 30px 25px;
+  margin: 25px 0 55px;
+
+  scroll-margin-top: 90px;
+}
+
+/* FIGMA BACKGROUND COLORS */
+
+.package-size-intimate {
+  background: #ffebef;
+  --tier-accent: #ff477e;
+}
+
+.package-size-small {
+  background: #e9ffe5;
+  --tier-accent: #56c744;
+}
+
+.package-size-medium {
+  background: #e9e9ff;
+  --tier-accent: #6e67ff;
+}
+
+.package-size-large {
+  background: #d5ffcb;
+  --tier-accent: #6258ff;
+}
+
+.package-size-extra-large {
+  background: #ffd8df;
+  --tier-accent: #645bff;
+}
+
+/* MAIN GROUP LAYOUT */
+
+.package-size-layout {
+  display: grid;
+  grid-template-columns: 255px minmax(0, 1fr);
+
+  gap: 20px;
+  align-items: start;
+}
+
+/* ==========================================
+   7. PACKAGE DESCRIPTION
+========================================== */
+
+.package-size-info {
+  min-width: 0;
+  padding-top: 18px;
+  text-align: left;
+}
+
+.package-size-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-width: 0;
+}
+
+.package-size-heading > svg {
+  flex-shrink: 0;
+  color: var(--tier-accent);
+}
+
+.package-size-heading h2 {
+  color: #111111;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  margin: 0;
+}
+
+.package-size-heading span {
+  display: block;
+
+  color: var(--tier-accent);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.package-size-info > p {
+  max-width: 225px;
+
+  color: #454545;
+  font-size: 12px;
+  line-height: 1.7;
+
+  margin: 18px 0 0;
+}
+
+/* ==========================================
+   8. PACKAGE CARDS GRID
+========================================== */
+
+.package-tier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+
+  gap: 20px;
+  min-width: 0;
+}
+
+.package-tier-card {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-radius: 11px;
+  overflow: hidden;
+
+  transition: transform 0.2s ease;
+}
+
+.package-tier-card:hover {
+  transform: translateY(-4px);
+}
+
+/* IMAGE */
+
+.package-tier-image {
+  width: 100%;
+  height: 155px;
+  overflow: hidden;
+}
+
+.package-tier-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* CARD CONTENT */
+
+.package-tier-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  min-width: 0;
+  padding: 0 14px 15px;
+
+  text-align: left;
+}
+
+/* PACKAGE BADGES */
+
+.package-tier-badge {
+  display: inline-block;
+  align-self: flex-start;
+
+  padding: 4px 13px;
+  margin-top: -1px;
+
+  border-radius: 0 0 12px 12px;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.tier-essential {
+  background: #d5ffd5;
+  color: #278b36;
+}
+
+.tier-classic {
+  background: #ddf2ff;
+  color: #3489dc;
+}
+
+.tier-premium {
+  background: #eee1ff;
+  color: #8160d8;
+}
+
+.tier-luxury {
+  background: #ffe0e8;
+  color: #ff477e;
+}
+
+.package-tier-content h3 {
+  margin: 12px 0 10px;
+
+  color: #171717;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* FEATURE CHECKLIST */
+
+.package-tier-features {
+  list-style: none;
+  padding: 0;
+
+  margin: 0 0 13px;
+}
+
+.package-tier-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+
+  color: #777777;
+  font-size: 10px;
+  line-height: 1.6;
+
+  margin: 2px 0;
+  overflow-wrap: anywhere;
+}
+
+.package-tier-features li svg {
+  color: #67ce7f;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* VIEW DETAILS BUTTON */
+
+.package-details-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+
+  align-self: flex-start;
+  margin-top: auto;
+
+  padding: 6px 13px;
+
+  background: #ffffff;
+  border: 1px solid var(--tier-accent);
+  border-radius: 20px;
+
+  color: var(--tier-accent);
+  font-size: 10px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.package-details-btn:hover {
+  background: var(--tier-accent);
+  color: #ffffff;
+}
+
+/* ==========================================
+   9. BOTTOM CONTACT / SERVICES BANNER
+========================================== */
+
+.package-bottom-cta {
+  width: 100%;
+
+  padding: 36px max(4%, calc((100% - 1200px) / 2));
+
+  display: grid;
+  grid-template-columns: 200px 310px minmax(0, 1fr);
+  align-items: center;
+
+  gap: 25px;
+
+  background-color: #fff6f8;
+  border-top: 1px solid #ffe0e9;
+}
+
+/* LEFT DECORATION */
+
+.package-cta-decoration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: rotate(-12deg);
+
+  color: var(--package-pink);
+  font-family: "Akaya Kanadaka", cursive;
+
+  font-size: 18px;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.package-cta-decoration svg {
+  margin-top: 6px;
+}
+
+/* CENTER CONTACT CONTENT */
+
+.package-cta-content {
+  min-width: 0;
+  text-align: left;
+}
+
+.package-cta-label {
+  color: var(--package-pink);
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.package-cta-content h2 {
+  color: #111111;
+
+  font-size: 20px;
+  line-height: 1.3;
+
+  margin: 7px 0;
+}
+
+.package-cta-content p {
+  color: #777777;
+
+  font-size: 11px;
+  line-height: 1.6;
+
+  margin: 0 0 14px;
+}
+
+.package-cta-content button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 17px;
+
+  background: var(--package-pink);
+  border: none;
+  border-radius: 24px;
+
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* RIGHT SERVICES */
+
+.package-cta-services {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  gap: 18px 9px;
+  min-width: 0;
+}
+
+.package-cta-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  min-width: 0;
+
+  text-align: center;
+  color: #111111;
+}
+
+.package-cta-service svg {
+  color: var(--package-pink);
+  flex-shrink: 0;
+}
+
+.package-cta-service span {
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   10. SMALL LAPTOPS
+   1024px - 1279px
+========================================== */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+  /* HERO */
+
+  .package-hero-content {
+    left: 8%;
+    top: 17%;
+    width: 42%;
+  }
+
+  .package-hero-content h1 {
+    font-size: 28px;
+  }
+
+  .package-dream-text {
+    left: 52%;
+    font-size: 15px;
+  }
+
+  .package-hero-features {
+    left: 8%;
+    max-width: 82%;
+    gap: 16px;
+  }
+
+  /* FILTER BAR */
+
+  .package-filter-container {
+    width: 95%;
+    gap: 12px;
+  }
+
+  .package-filter-box {
+    padding: 11px 12px;
+  }
+
+  .package-view-btn {
+    padding: 12px 15px;
+  }
+
+  /* PACKAGE SECTIONS */
+
+  .package-sections {
+    width: 97%;
+  }
+
+  .package-size-section {
+    padding: 24px 18px;
+  }
+
+  .package-size-layout {
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .package-size-heading h2 {
+    font-size: 21px;
+  }
+
+  .package-tier-grid {
+    gap: 12px;
+  }
+
+  .package-tier-image {
+    height: 130px;
+  }
+
+  .package-tier-content {
+    padding: 0 11px 13px;
+  }
+
+  .package-tier-content h3 {
+    font-size: 12px;
+  }
+
+  .package-tier-features li {
+    font-size: 9px;
+  }
+
+  /* BOTTOM CTA */
+
+  .package-bottom-cta {
+    grid-template-columns: 145px 240px minmax(0, 1fr);
+
+    padding: 30px 4%;
+    gap: 18px;
+  }
+
+  .package-cta-services {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px 8px;
+  }
+}
+
+/* ==========================================
+   11. TABLETS
+   768px - 1023px
+========================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* HERO */
+
+  .package-hero {
+    aspect-ratio: auto;
+    min-height: 335px;
+    height: 335px;
+  }
+
+  .package-hero-content {
+    left: 7%;
+    top: 15%;
+
+    width: 46%;
+  }
+
+  .package-small-title {
+    font-size: 14px;
+  }
+
+  .package-hero-content h1 {
+    font-size: clamp(24px, 3vw, 30px);
+  }
+
+  .package-hero-content p {
+    font-size: 10px;
+  }
+
+  .package-dream-text {
+    left: 56%;
+    top: 30%;
+    font-size: 13px;
+  }
+
+  .package-hero-features {
+    left: 7%;
+    bottom: 8%;
+
+    max-width: 86%;
+    gap: 12px 18px;
+  }
+
+  .package-feature > svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .package-feature h4 {
+    font-size: 10px;
+  }
+
+  .package-feature p {
+    font-size: 8px;
+  }
+
+  /* FILTERS */
+
+  .package-filter-section {
+    padding: 30px 0;
+  }
+
+  .package-filter-container {
+    width: 94%;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .package-filter-box {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .package-view-btn {
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    padding: 12px 30px;
+  }
+
+  /* PACKAGE SECTIONS */
+
+  .package-sections {
+    width: 95%;
+  }
+
+  .package-size-section {
+    padding: 25px 22px;
+    margin: 18px 0 35px;
+  }
+
+  .package-size-layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .package-size-info {
+    padding-top: 0;
+  }
+
+  .package-size-info > p {
+    max-width: 600px;
+    margin-top: 10px;
+  }
+
+  .package-size-heading h2 {
+    font-size: 23px;
+  }
+
+  .package-tier-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .package-tier-image {
+    height: 180px;
+  }
+
+  .package-tier-content h3 {
+    font-size: 14px;
+  }
+
+  .package-tier-features li {
+    font-size: 11px;
+  }
+
+  /* BOTTOM CTA */
+
+  .package-bottom-cta {
+    grid-template-columns: 160px minmax(0, 1fr);
+
+    padding: 35px 6%;
+    gap: 25px;
+  }
+
+  .package-cta-decoration {
+    font-size: 17px;
+  }
+
+  .package-cta-content h2 {
+    font-size: 22px;
+  }
+
+  .package-cta-services {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+
+    gap: 18px 12px;
+  }
+
+  .package-cta-service span {
+    font-size: 10px;
+  }
+}
+
+/* ==========================================
+   12. LARGE PHONES / SMALL TABLETS
+   480px - 767px
+========================================== */
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+  /* HERO */
+
+  .package-hero {
+    aspect-ratio: auto;
+    min-height: 350px;
+    height: 350px;
+  }
+
+  .package-hero-content {
+    left: 6%;
+    top: 12%;
+
+    width: 54%;
+  }
+
+  .package-small-title {
+    font-size: 12px;
+  }
+
+  .package-hero-content h1 {
+    font-size: clamp(19px, 3.7vw, 26px);
+  }
+
+  .package-hero-content p {
+    font-size: 10px;
+  }
+
+  .package-dream-text {
+    left: 62%;
+    top: 32%;
+    font-size: 11px;
+  }
+
+  .package-hero-features {
+    left: 6%;
+    bottom: 6%;
+
+    max-width: 90%;
+    gap: 10px 15px;
+  }
+
+  .package-feature > svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .package-feature h4 {
+    font-size: 9px;
+  }
+
+  .package-feature p {
+    font-size: 8px;
+  }
+
+  /* FILTERS */
+
+  .package-filter-section {
+    padding: 25px 0;
+  }
+
+  .package-filter-container {
+    width: 92%;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .package-filter-box {
+    width: 100%;
+    min-width: 0;
+
+    padding: 12px;
+  }
+
+  .package-view-btn {
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    width: min(260px, 100%);
+  }
+
+  /* SIZE SECTIONS */
+
+  .package-sections {
+    width: 94%;
+  }
+
+  .package-size-section {
+    padding: 22px 16px;
+    margin: 18px 0 30px;
+    border-radius: 13px;
+  }
+
+  .package-size-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .package-size-info {
+    padding-top: 0;
+  }
+
+  .package-size-heading h2 {
+    font-size: 22px;
+  }
+
+  .package-size-info > p {
+    max-width: 100%;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .package-tier-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px;
+  }
+
+  .package-tier-image {
+    height: 145px;
+  }
+
+  .package-tier-content {
+    padding: 0 11px 13px;
+  }
+
+  .package-tier-content h3 {
+    font-size: 12px;
+  }
+
+  .package-tier-features li {
+    font-size: 10px;
+  }
+
+  /* CTA */
+
+  .package-bottom-cta {
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    padding: 35px 7%;
+  }
+
+  .package-cta-decoration {
+    justify-self: center;
+    font-size: 17px;
+  }
+
+  .package-cta-content {
+    text-align: center;
+  }
+
+  .package-cta-services {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px 12px;
+  }
+}
+
+/* ==========================================
+   13. MOBILE
+   360px - 479px
+========================================== */
+
+@media (min-width: 360px) and (max-width: 479px) {
+
+  /* HERO */
+
+  .package-hero {
+    aspect-ratio: auto;
+
+    height: 390px;
+    min-height: 390px;
+  }
+
+  .package-hero-content {
+    top: 9%;
+    left: 5%;
+
+    width: 60%;
+  }
+
+  .package-small-title {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .package-hero-content h1 {
+    font-size: clamp(18px, 4.8vw, 22px);
+    line-height: 1.2;
+  }
+
+  .package-hero-content p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .package-dream-text {
+    left: 68%;
+    top: 29%;
+
+    font-size: 9px;
+  }
+
+  .package-dream-text svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .package-hero-features {
+    left: 5%;
+    right: 5%;
+    bottom: 6%;
+
+    max-width: none;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 14px 9px;
+  }
+
+  .package-feature {
+    gap: 6px;
+  }
+
+  .package-feature > svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .package-feature h4 {
+    font-size: 9px;
+    white-space: normal;
+  }
+
+  .package-feature p {
+    font-size: 8px;
+    white-space: normal;
+  }
+
+  /* FILTER SECTION */
+
+  .package-filter-section {
+    padding: 25px 0 20px;
+  }
+
+  .package-filter-container {
+    width: 92%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .package-filter-box {
+    width: 100%;
+    padding: 13px 15px;
+  }
+
+  .package-filter-field label {
+    font-size: 11px;
+  }
+
+  .package-filter-field select {
+    font-size: 13px;
+  }
+
+  .package-view-btn {
+    width: 100%;
+    min-height: 44px;
+    justify-content: center;
+  }
+
+  /* SIZE SECTIONS */
+
+  .package-sections {
+    width: 94%;
+  }
+
+  .package-size-section {
+    padding: 22px 14px;
+    margin: 15px 0 25px;
+    border-radius: 12px;
+  }
+
+  .package-size-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .package-size-info {
+    padding-top: 0;
+  }
+
+  .package-size-heading h2 {
+    font-size: 21px;
+  }
+
+  .package-size-heading span {
+    font-size: 11px;
+  }
+
+  .package-size-info > p {
+    max-width: 100%;
+
+    font-size: 11px;
+    line-height: 1.65;
+
+    margin-top: 10px;
+  }
+
+  /* ONE PACKAGE CARD PER ROW */
+
+  .package-tier-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .package-tier-image {
+    height: 190px;
+  }
+
+  .package-tier-content {
+    padding: 0 15px 17px;
+  }
+
+  .package-tier-badge {
+    font-size: 12px;
+  }
+
+  .package-tier-content h3 {
+    font-size: 15px;
+  }
+
+  .package-tier-features li {
+    font-size: 12px;
+  }
+
+  .package-details-btn {
+    padding: 9px 15px;
+    font-size: 11px;
+  }
+
+  /* BOTTOM CTA */
+
+  .package-bottom-cta {
+    grid-template-columns: 1fr;
+    gap: 23px;
+
+    padding: 30px 6%;
+  }
+
+  .package-cta-decoration {
+    justify-self: center;
+    font-size: 16px;
+  }
+
+  .package-cta-content {
+    text-align: center;
+  }
+
+  .package-cta-content h2 {
+    font-size: 21px;
+  }
+
+  .package-cta-content p {
+    font-size: 12px;
+  }
+
+  .package-cta-services {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px 10px;
+  }
+
+  .package-cta-service span {
+    font-size: 10px;
+  }
+}
+
+/* ==========================================
+   14. EXTRA SMALL MOBILE
+   BELOW 360px
+========================================== */
+
+@media (max-width: 359px) {
+
+  /* HERO */
+
+  .package-hero {
+    aspect-ratio: auto;
+
+    height: 410px;
+    min-height: 410px;
+  }
+
+  .package-hero-content {
+    top: 8%;
+    left: 5%;
+
+    width: 63%;
+  }
+
+  .package-small-title {
+    font-size: 10px;
+  }
+
+  .package-hero-content h1 {
+    font-size: 17px;
+  }
+
+  .package-hero-content p {
+    font-size: 9px;
+  }
+
+  .package-dream-text {
+    left: 71%;
+    top: 30%;
+    font-size: 8px;
+  }
+
+  .package-hero-features {
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+
+    max-width: none;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 7px;
+  }
+
+  .package-feature {
+    gap: 5px;
+  }
+
+  .package-feature > svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .package-feature h4 {
+    font-size: 9px;
+    white-space: normal;
+  }
+
+  .package-feature p {
+    font-size: 8px;
+    white-space: normal;
+  }
+
+  /* FILTERS */
+
+  .package-filter-section {
+    padding: 22px 0;
+  }
+
+  .package-filter-container {
+    width: 92%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .package-filter-box {
+    width: 100%;
+  }
+
+  .package-view-btn {
+    width: 100%;
+  }
+
+  /* PACKAGE SECTIONS */
+
+  .package-sections {
+    width: 94%;
+  }
+
+  .package-size-section {
+    padding: 18px 12px;
+
+    margin: 12px 0 22px;
+    border-radius: 10px;
+  }
+
+  .package-size-layout {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .package-size-info {
+    padding-top: 0;
+  }
+
+  .package-size-heading {
+    gap: 7px;
+  }
+
+  .package-size-heading h2 {
+    font-size: 19px;
+  }
+
+  .package-size-info > p {
+    max-width: 100%;
+    font-size: 11px;
+  }
+
+  /* SINGLE PACKAGE CARD */
+
+  .package-tier-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .package-tier-image {
+    height: 175px;
+  }
+
+  .package-tier-content {
+    padding: 0 12px 15px;
+  }
+
+  .package-tier-content h3 {
+    font-size: 14px;
+  }
+
+  .package-tier-features li {
+    font-size: 11px;
+  }
+
+  /* CTA */
+
+  .package-bottom-cta {
+    grid-template-columns: 1fr;
+
+    padding: 28px 5%;
+    gap: 20px;
+  }
+
+  .package-cta-decoration {
+    justify-self: center;
+    font-size: 15px;
+  }
+
+  .package-cta-content {
+    text-align: center;
+  }
+
+  .package-cta-content h2 {
+    font-size: 19px;
+  }
+
+  .package-cta-services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 10px;
+  }
+}
+
+/* ==========================================
+   15. LARGE DESKTOPS
+   1440px - 1919px
+========================================== */
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+
+  .package-hero-content {
+    left: 11%;
+    max-width: 470px;
+  }
+
+  .package-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .package-hero-content p {
+    font-size: 13px;
+  }
+
+  .package-hero-features {
+    left: 11%;
+  }
+
+  .package-filter-container {
+    width: min(1250px, 90%);
+  }
+
+  .package-sections {
+    width: min(1320px, 92%);
+  }
+
+  .package-size-layout {
+    grid-template-columns: 270px minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .package-tier-image {
+    height: 175px;
+  }
+
+  .package-tier-content h3 {
+    font-size: 14px;
+  }
+
+  .package-bottom-cta {
+    padding: 45px max(5%, calc((100% - 1320px) / 2));
+  }
+}
+
+/* ==========================================
+   16. FULL HD / LARGE MONITORS
+   1920px AND ABOVE
+========================================== */
+
+@media (min-width: 1920px) {
+
+  .package-hero {
+    min-height: 440px;
+    max-height: 620px;
+  }
+
+  .package-hero-content {
+    left: max(12%, calc((100% - 1400px) / 2));
+
+    width: 38%;
+    max-width: 550px;
+  }
+
+  .package-small-title {
+    font-size: 21px;
+  }
+
+  .package-hero-content h1 {
+    font-size: 43px;
+  }
+
+  .package-hero-content p {
+    max-width: 460px;
+    font-size: 15px;
+  }
+
+  .package-dream-text {
+    font-size: 23px;
+  }
+
+  .package-hero-features {
+    left: max(12%, calc((100% - 1400px) / 2));
+    gap: 30px;
+  }
+
+  .package-feature h4 {
+    font-size: 13px;
+  }
+
+  .package-feature p {
+    font-size: 11px;
+  }
+
+  .package-filter-container {
+    width: min(1400px, 86%);
+  }
+
+  .package-filter-box {
+    padding: 16px 20px;
+  }
+
+  .package-filter-field label {
+    font-size: 12px;
+  }
+
+  .package-filter-field select {
+    font-size: 15px;
+  }
+
+  .package-sections {
+    width: min(1400px, 88%);
+  }
+
+  .package-size-section {
+    padding: 40px 35px;
+  }
+
+  .package-size-layout {
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .package-size-heading h2 {
+    font-size: 28px;
+  }
+
+  .package-size-info > p {
+    font-size: 14px;
+  }
+
+  .package-tier-image {
+    height: 210px;
+  }
+
+  .package-tier-content {
+    padding: 0 18px 20px;
+  }
+
+  .package-tier-content h3 {
+    font-size: 17px;
+  }
+
+  .package-tier-features li {
+    font-size: 12px;
+  }
+
+  .package-details-btn {
+    font-size: 12px;
+    padding: 9px 16px;
+  }
+
+  .package-bottom-cta {
+    grid-template-columns: 220px 350px minmax(0, 1fr);
+
+    padding: 55px max(6%, calc((100% - 1400px) / 2));
+  }
+
+  .package-cta-content h2 {
+    font-size: 25px;
+  }
+
+  .package-cta-content p {
+    font-size: 13px;
+  }
+
+  .package-cta-service span {
+    font-size: 11px;
+  }
+}
+
+/* ==========================================
+   17. ULTRAWIDE / 4K MONITORS
+   2560px AND ABOVE
+========================================== */
+
+@media (min-width: 2560px) {
+
+  .package-hero {
+    min-height: 540px;
+    max-height: 700px;
+  }
+
+  .package-hero-content h1 {
+    font-size: 49px;
+  }
+
+  .package-hero-content p {
+    font-size: 17px;
+  }
+
+  .package-dream-text {
+    font-size: 27px;
+  }
+
+  .package-filter-container {
+    width: min(1500px, 80%);
+  }
+
+  .package-sections {
+    width: min(1500px, 82%);
+  }
+
+  .package-size-layout {
+    grid-template-columns: 320px minmax(0, 1fr);
+  }
+
+  .package-tier-image {
+    height: 230px;
+  }
+
+  .package-tier-content h3 {
+    font-size: 18px;
+  }
+
+  .package-bottom-cta {
+    padding: 60px max(8%, calc((100% - 1500px) / 2));
+  }
+}
+
+/* ==========================================
+   18. LANDSCAPE MOBILE SCREENS
+========================================== */
+
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 950px) {
+
+  .package-hero {
+    height: 340px;
+    min-height: 340px;
+  }
+
+  .package-hero-content {
+    top: 10%;
+  }
+
+  .package-hero-content h1 {
+    font-size: clamp(20px, 3vw, 28px);
+  }
+
+  .package-dream-text {
+    top: 28%;
+  }
+
+  .package-hero-features {
+    bottom: 6%;
+  }
+}
+
+/* ==========================================
+   19. TOUCH SCREEN DEVICES
+========================================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .package-view-btn,
+  .package-details-btn,
+  .package-cta-content button {
+    min-height: 44px;
+  }
+
+  .package-tier-card:hover {
+    transform: none;
+  }
+}
+
+/* ==========================================
+   20. REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .package-tier-card,
+  .package-details-btn {
+    transition: none;
+  }
+
+  .package-tier-card:hover {
+    transform: none;
+  }
+}

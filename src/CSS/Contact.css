@@ -1,0 +1,1141 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* ======================================================
+   1. GLOBAL STYLES
+====================================================== */
+
+.contact-page {
+  --contact-pink: #ff477e;
+  --contact-dark: #171717;
+  --contact-purple: #7d79ff;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  background: #ffffff;
+  color: var(--contact-dark);
+
+  font-family: "Poppins", sans-serif;
+  overflow-x: clip;
+}
+
+.contact-page *,
+.contact-page *::before,
+.contact-page *::after {
+  box-sizing: border-box;
+}
+
+.contact-page a {
+  text-decoration: none;
+}
+
+.contact-page a:focus-visible {
+  outline: 2px solid var(--contact-pink);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ======================================================
+   2. HERO BANNER - DESKTOP
+====================================================== */
+
+.contact-hero {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 3.35 / 1;
+  min-height: 280px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  overflow: hidden;
+}
+
+.contact-hero-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* HERO LEFT CONTENT */
+
+.contact-hero-content {
+  position: absolute;
+  z-index: 2;
+
+  top: 18%;
+  left: 8.5%;
+
+  width: 43%;
+  max-width: 480px;
+
+  text-align: left;
+}
+
+.contact-hero-label {
+  display: block;
+
+  color: var(--contact-pink);
+  font-size: clamp(14px, 1.8vw, 22px);
+  font-weight: 500;
+  line-height: 1.3;
+
+  margin-bottom: 12px;
+}
+
+.contact-hero-content h1 {
+  color: #111111;
+
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.5;
+
+  margin: 0 0 8px;
+}
+
+.contact-hero-content > p {
+  max-width: 465px;
+  margin: 0;
+
+  color: #777777;
+  font-size: clamp(10px, 1vw, 14px);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* HERO DECORATIVE TEXT */
+
+.contact-hero-decoration {
+  position: absolute;
+  z-index: 3;
+
+  top: 43%;
+  left: 47%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: var(--contact-pink);
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: clamp(15px, 1.6vw, 21px);
+  line-height: 1.05;
+
+  transform: rotate(-15deg);
+}
+
+.contact-hero-decoration span {
+  display: block;
+  white-space: nowrap;
+}
+
+.contact-hero-decoration svg {
+  align-self: center;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+/* ======================================================
+   3. CONTACT INFORMATION + MAP
+====================================================== */
+
+.contact-main {
+  display: grid;
+  grid-template-columns: minmax(0, 46fr) minmax(0, 54fr);
+  align-items: stretch;
+
+  width: 100%;
+  min-height: 670px;
+
+  background: #ffffff;
+}
+
+/* ======================================================
+   4. LEFT CONTACT INFORMATION
+====================================================== */
+
+.contact-info-panel {
+  width: 100%;
+  min-width: 0;
+
+  padding: 38px 30px 35px 6%;
+  background: #ffffff;
+}
+
+.contact-info-inner {
+  width: 100%;
+  max-width: 500px;
+  min-width: 0;
+}
+
+/* SECTION LABEL */
+
+.contact-section-label {
+  display: block;
+
+  color: var(--contact-pink);
+  font-size: clamp(14px, 1.5vw, 19px);
+  font-weight: 600;
+  line-height: 1.4;
+
+  margin-bottom: 10px;
+}
+
+/* SECTION TITLE */
+
+.contact-info-inner h2 {
+  color: #111111;
+
+  font-size: clamp(25px, 2.7vw, 36px);
+  font-weight: 700;
+  line-height: 1.3;
+
+  margin: 0 0 10px;
+}
+
+/* INTRODUCTION */
+
+.contact-intro {
+  max-width: 445px;
+
+  color: #222222;
+  font-size: clamp(12px, 1.2vw, 16px);
+  font-weight: 500;
+  line-height: 1.5;
+
+  margin: 0 0 38px;
+}
+
+/* ======================================================
+   5. CONTACT DETAIL LIST
+====================================================== */
+
+.contact-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+
+  width: 100%;
+  min-width: 0;
+}
+
+/* EACH CONTACT DETAIL */
+
+.contact-detail {
+  display: grid;
+  grid-template-columns: 55px minmax(0, 1fr);
+  align-items: start;
+
+  gap: 22px;
+  min-width: 0;
+}
+
+/* DETAIL ICON */
+
+.contact-detail-icon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  color: var(--contact-pink);
+  padding-top: 5px;
+}
+
+.contact-detail-icon svg {
+  flex-shrink: 0;
+}
+
+/* DETAIL TEXT */
+
+.contact-detail-text {
+  min-width: 0;
+  text-align: left;
+}
+
+.contact-detail-text h3 {
+  color: #111111;
+
+  font-size: clamp(15px, 1.4vw, 19px);
+  font-weight: 700;
+  line-height: 1.4;
+
+  margin: 0 0 4px;
+}
+
+/* PHONE, EMAIL, LOCATION, SOCIAL DESCRIPTION */
+
+.contact-detail-text a,
+.contact-detail-text > span,
+.contact-detail-text > p {
+  display: block;
+
+  color: var(--contact-purple);
+  font-size: clamp(13px, 1.3vw, 17px);
+  font-weight: 600;
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+  margin: 0;
+}
+
+.contact-detail-text a:hover {
+  color: var(--contact-pink);
+}
+
+.contact-detail-text > span {
+  font-size: clamp(12px, 1.2vw, 16px);
+}
+
+/* ======================================================
+   6. SOCIAL ICONS
+====================================================== */
+
+.contact-socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 33px;
+  margin-top: 25px;
+}
+
+.contact-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  color: var(--contact-pink);
+  background: transparent;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.contact-socials a svg {
+  width: 29px;
+  height: 29px;
+}
+
+.contact-socials a:hover {
+  color: #d62d63;
+  transform: translateY(-3px);
+}
+
+/* ======================================================
+   7. GOOGLE MAP PANEL
+====================================================== */
+
+.contact-map-panel {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 670px;
+
+  overflow: hidden;
+  background: #f1f1f1;
+}
+
+.contact-map-panel iframe {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  min-height: 670px;
+
+  border: 0;
+}
+
+/* ======================================================
+   8. LARGE DESKTOPS
+   1440px - 1919px
+====================================================== */
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+
+  .contact-hero-content {
+    top: 18%;
+    left: 9%;
+    max-width: 510px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 40px;
+  }
+
+  .contact-hero-content > p {
+    font-size: 14px;
+  }
+
+  .contact-info-panel {
+    padding: 50px 35px 45px 9%;
+  }
+
+  .contact-info-inner {
+    max-width: 540px;
+  }
+
+  .contact-main,
+  .contact-map-panel,
+  .contact-map-panel iframe {
+    min-height: 720px;
+  }
+
+  .contact-detail-list {
+    gap: 37px;
+  }
+}
+
+/* ======================================================
+   9. FULL HD / LARGE MONITORS
+   1920px - 2559px
+====================================================== */
+
+@media (min-width: 1920px) {
+
+  .contact-hero {
+    max-height: 600px;
+    min-height: 420px;
+  }
+
+  .contact-hero-content {
+    top: 18%;
+    left: 12%;
+
+    width: 39%;
+    max-width: 590px;
+  }
+
+  .contact-hero-label {
+    font-size: 24px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 45px;
+  }
+
+  .contact-hero-content > p {
+    font-size: 16px;
+    max-width: 550px;
+  }
+
+  .contact-hero-decoration {
+    left: 48%;
+    font-size: 23px;
+  }
+
+  .contact-main {
+    min-height: 780px;
+  }
+
+  .contact-info-panel {
+    padding: 60px 45px 55px 12%;
+  }
+
+  .contact-info-inner {
+    max-width: 600px;
+  }
+
+  .contact-section-label {
+    font-size: 21px;
+  }
+
+  .contact-info-inner h2 {
+    font-size: 40px;
+  }
+
+  .contact-intro {
+    font-size: 17px;
+    max-width: 500px;
+  }
+
+  .contact-detail-list {
+    gap: 40px;
+  }
+
+  .contact-detail-text h3 {
+    font-size: 20px;
+  }
+
+  .contact-detail-text a,
+  .contact-detail-text > span,
+  .contact-detail-text > p {
+    font-size: 17px;
+  }
+
+  .contact-map-panel,
+  .contact-map-panel iframe {
+    min-height: 780px;
+  }
+}
+
+/* ======================================================
+   10. ULTRAWIDE / 4K MONITORS
+   2560px AND ABOVE
+====================================================== */
+
+@media (min-width: 2560px) {
+
+  .contact-hero {
+    min-height: 500px;
+    max-height: 700px;
+  }
+
+  .contact-hero-content {
+    left: 14%;
+    max-width: 660px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 52px;
+  }
+
+  .contact-hero-content > p {
+    font-size: 18px;
+  }
+
+  .contact-hero-decoration {
+    font-size: 27px;
+  }
+
+  .contact-main {
+    min-height: 850px;
+  }
+
+  .contact-info-panel {
+    padding: 70px 50px 65px 15%;
+  }
+
+  .contact-info-inner {
+    max-width: 700px;
+  }
+
+  .contact-info-inner h2 {
+    font-size: 44px;
+  }
+
+  .contact-detail-text h3 {
+    font-size: 22px;
+  }
+
+  .contact-detail-text a,
+  .contact-detail-text > span,
+  .contact-detail-text > p {
+    font-size: 19px;
+  }
+
+  .contact-map-panel,
+  .contact-map-panel iframe {
+    min-height: 850px;
+  }
+}
+
+/* ======================================================
+   11. SMALL LAPTOPS
+   1024px - 1279px
+====================================================== */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+  /* HERO */
+
+  .contact-hero-content {
+    top: 15%;
+    left: 7%;
+    width: 45%;
+  }
+
+  .contact-hero-label {
+    font-size: 17px;
+    margin-bottom: 9px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 30px;
+    line-height: 1.35;
+  }
+
+  .contact-hero-content > p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .contact-hero-decoration {
+    left: 54%;
+    top: 40%;
+    font-size: 15px;
+  }
+
+  /* CONTACT SECTION */
+
+  .contact-main {
+    min-height: 630px;
+  }
+
+  .contact-info-panel {
+    padding: 35px 22px 35px 6%;
+  }
+
+  .contact-info-inner h2 {
+    font-size: 30px;
+  }
+
+  .contact-intro {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+  .contact-detail-list {
+    gap: 28px;
+  }
+
+  .contact-detail {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .contact-detail-icon svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .contact-detail-text h3 {
+    font-size: 16px;
+  }
+
+  .contact-detail-text a,
+  .contact-detail-text > span,
+  .contact-detail-text > p {
+    font-size: 13px;
+  }
+
+  .contact-socials {
+    gap: 25px;
+  }
+
+  .contact-map-panel,
+  .contact-map-panel iframe {
+    min-height: 630px;
+  }
+}
+
+/* ======================================================
+   12. TABLETS
+   768px - 1023px
+====================================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* HERO */
+
+  .contact-hero {
+    aspect-ratio: auto;
+    height: 340px;
+    min-height: 340px;
+  }
+
+  .contact-hero-content {
+    top: 14%;
+    left: 6%;
+    width: 48%;
+  }
+
+  .contact-hero-label {
+    font-size: 15px;
+    margin-bottom: 9px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: clamp(25px, 3vw, 31px);
+    line-height: 1.3;
+  }
+
+  .contact-hero-content > p {
+    font-size: 10px;
+    line-height: 1.55;
+  }
+
+  .contact-hero-decoration {
+    top: 38%;
+    left: 57%;
+    font-size: 13px;
+  }
+
+  /* TWO COLUMNS */
+
+  .contact-main {
+    grid-template-columns: minmax(0, 48fr) minmax(0, 52fr);
+    min-height: 600px;
+  }
+
+  .contact-info-panel {
+    padding: 33px 18px 33px 5%;
+  }
+
+  .contact-section-label {
+    font-size: 15px;
+  }
+
+  .contact-info-inner h2 {
+    font-size: 25px;
+  }
+
+  .contact-intro {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .contact-detail-list {
+    gap: 26px;
+  }
+
+  .contact-detail {
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .contact-detail-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-detail-text h3 {
+    font-size: 15px;
+  }
+
+  .contact-detail-text a,
+  .contact-detail-text > span,
+  .contact-detail-text > p {
+    font-size: 12px;
+  }
+
+  .contact-socials {
+    gap: 20px;
+    margin-top: 18px;
+  }
+
+  .contact-socials a svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .contact-map-panel,
+  .contact-map-panel iframe {
+    min-height: 600px;
+  }
+}
+
+/* ======================================================
+   13. LARGE PHONES / SMALL TABLETS
+   481px - 767px
+====================================================== */
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  /* HERO */
+
+  .contact-hero {
+    aspect-ratio: auto;
+    height: 330px;
+    min-height: 330px;
+  }
+
+  .contact-hero-content {
+    top: 13%;
+    left: 6%;
+    width: 54%;
+  }
+
+  .contact-hero-label {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: clamp(20px, 3.6vw, 27px);
+    line-height: 1.25;
+  }
+
+  .contact-hero-content > p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .contact-hero-decoration {
+    top: 39%;
+    left: 62%;
+    font-size: 11px;
+  }
+
+  /* STACK CONTACT INFO ABOVE MAP */
+
+  .contact-main {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .contact-info-panel {
+    padding: 40px 7%;
+  }
+
+  .contact-info-inner {
+    max-width: 620px;
+  }
+
+  .contact-info-inner h2 {
+    font-size: 29px;
+  }
+
+  .contact-intro {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+  .contact-detail-list {
+    gap: 28px;
+  }
+
+  .contact-detail {
+    grid-template-columns: 45px minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .contact-detail-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .contact-detail-text h3 {
+    font-size: 17px;
+  }
+
+  .contact-detail-text a,
+  .contact-detail-text > span,
+  .contact-detail-text > p {
+    font-size: 14px;
+  }
+
+  .contact-map-panel {
+    min-height: 400px;
+    height: 400px;
+  }
+
+  .contact-map-panel iframe {
+    min-height: 400px;
+    height: 400px;
+  }
+}
+
+/* ======================================================
+   14. MOBILE
+   361px - 480px
+====================================================== */
+
+@media (min-width: 361px) and (max-width: 480px) {
+
+  /* HERO */
+
+  .contact-hero {
+    aspect-ratio: auto;
+    height: 310px;
+    min-height: 310px;
+  }
+
+  .contact-hero-content {
+    top: 11%;
+    left: 5%;
+    width: 59%;
+  }
+
+  .contact-hero-label {
+    font-size: 11px;
+    margin-bottom: 7px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: clamp(17px, 4.8vw, 22px);
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+
+  .contact-hero-content > p {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+
+  .contact-hero-decoration {
+    top: 42%;
+    left: 66%;
+    font-size: 9px;
+  }
+
+  .contact-hero-decoration svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* CONTACT INFO */
+
+  .contact-main {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .contact-info-panel {
+    padding: 38px 6% 42px;
+  }
+
+  .contact-info-inner {
+    max-width: 100%;
+  }
+
+  .contact-section-label {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  .contact-info-inner h2 {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+
+  .contact-intro {
+    font-size: 12px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .contact-detail-list {
+    gap: 30px;
+  }
+
+  .contact-detail {
+    grid-template-columns: 35px minmax(0, 1fr);
+    gap: 15px;
+  }
+
+  .contact-detail-icon {
+    padding-top: 4px;
+  }
+
+  .contact-detail-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .contact-detail-text h3 {
+    font-size: 16px;
+  }
+
+  .contact-detail-text a,
+  .contact-detail-text > span,
+  .contact-detail-text > p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .contact-socials {
+    gap: 23px;
+    margin-top: 20px;
+  }
+
+  .contact-socials a svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* MAP BELOW CONTACT INFO */
+
+  .contact-map-panel {
+    min-height: 350px;
+    height: 350px;
+  }
+
+  .contact-map-panel iframe {
+    min-height: 350px;
+    height: 350px;
+  }
+}
+
+/* ======================================================
+   15. SMALL MOBILE
+   UP TO 360px
+====================================================== */
+
+@media (max-width: 360px) {
+
+  .contact-hero {
+    aspect-ratio: auto;
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .contact-hero-content {
+    top: 9%;
+    left: 5%;
+    width: 62%;
+  }
+
+  .contact-hero-label {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 7px;
+  }
+
+  .contact-hero-content > p {
+    font-size: 8px;
+    line-height: 1.5;
+  }
+
+  .contact-hero-decoration {
+    left: 70%;
+    top: 43%;
+    font-size: 8px;
+  }
+
+  .contact-hero-decoration svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* CONTACT INFO */
+
+  .contact-main {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .contact-info-panel {
+    padding: 32px 5% 38px;
+  }
+
+  .contact-section-label {
+    font-size: 12px;
+  }
+
+  .contact-info-inner h2 {
+    font-size: 23px;
+  }
+
+  .contact-intro {
+    font-size: 11px;
+    margin-bottom: 25px;
+  }
+
+  .contact-detail-list {
+    gap: 25px;
+  }
+
+  .contact-detail {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .contact-detail-icon svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .contact-detail-text h3 {
+    font-size: 14px;
+  }
+
+  .contact-detail-text a,
+  .contact-detail-text > span,
+  .contact-detail-text > p {
+    font-size: 11px;
+    line-height: 1.55;
+  }
+
+  .contact-socials {
+    gap: 17px;
+    margin-top: 18px;
+  }
+
+  .contact-socials a svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* MAP */
+
+  .contact-map-panel {
+    min-height: 310px;
+    height: 310px;
+  }
+
+  .contact-map-panel iframe {
+    min-height: 310px;
+    height: 310px;
+  }
+}
+
+/* ======================================================
+   16. LANDSCAPE PHONES
+====================================================== */
+
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 950px) {
+
+  .contact-hero {
+    aspect-ratio: auto;
+    height: 310px;
+    min-height: 310px;
+  }
+
+  .contact-hero-content {
+    top: 10%;
+  }
+
+  .contact-hero-content h1 {
+    font-size: clamp(20px, 3vw, 28px);
+  }
+
+  .contact-hero-decoration {
+    top: 36%;
+  }
+}
+
+/* ======================================================
+   17. TOUCH DEVICE ADJUSTMENTS
+====================================================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .contact-socials a {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .contact-socials a:hover {
+    transform: none;
+  }
+}
+
+/* ======================================================
+   18. REDUCED MOTION
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .contact-socials a {
+    transition: none;
+  }
+
+  .contact-socials a:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,1276 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* ======================================================
+   ABOUT PAGE - DESIGN VARIABLES
+====================================================== */
+
+.about-page {
+  --about-pink: #ff477e;
+  --about-dark: #161616;
+  --about-muted: #666666;
+  --about-max-width: 1200px;
+
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
+  font-family: "Poppins", sans-serif;
+  color: var(--about-dark);
+  background: #ffffff;
+
+  overflow-x: clip;
+}
+
+.about-page *,
+.about-page *::before,
+.about-page *::after {
+  box-sizing: border-box;
+}
+
+.about-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.about-page button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.about-container {
+  width: min(var(--about-max-width), 92%);
+  margin-inline: auto;
+  min-width: 0;
+}
+
+.about-section-label {
+  display: block;
+  color: var(--about-pink);
+  font-size: clamp(12px, 1.1vw, 15px);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ======================================================
+   1. ABOUT HERO BANNER - DESKTOP
+====================================================== */
+
+.about-hero {
+  position: relative;
+  width: 100%;
+
+  /* Keep the banner proportional */
+  aspect-ratio: 3 / 1;
+  min-height: 280px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  overflow: hidden;
+}
+
+.about-hero-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* HERO LEFT CONTENT */
+
+.about-hero-content {
+  position: absolute;
+  z-index: 2;
+
+  top: 12%;
+  left: max(5%, calc((100% - 1200px) / 2));
+
+  width: 42%;
+  max-width: 470px;
+
+  text-align: left;
+}
+
+.about-small-title {
+  display: block;
+  color: var(--about-pink);
+
+  font-size: clamp(12px, 1.5vw, 19px);
+  font-weight: 600;
+  line-height: 1.3;
+
+  margin-bottom: 12px;
+}
+
+.about-hero-content h1 {
+  color: #111111;
+
+  font-size: clamp(21px, 2.7vw, 38px);
+  font-weight: 700;
+  line-height: 1.3;
+
+  margin: 0 0 12px;
+  overflow-wrap: break-word;
+}
+
+.about-hero-content p {
+  color: var(--about-muted);
+
+  font-size: clamp(10px, 0.85vw, 12px);
+  font-weight: 400;
+  line-height: 1.65;
+
+  max-width: 440px;
+  margin: 0;
+}
+
+/* DECORATIVE HERO TEXT */
+
+.about-hero-decoration {
+  position: absolute;
+  z-index: 3;
+
+  left: 52%;
+  top: 27%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: var(--about-pink);
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: clamp(12px, 1.5vw, 20px);
+  line-height: 1.05;
+
+  transform: rotate(-17deg);
+}
+
+.about-hero-decoration > span {
+  display: block;
+  white-space: nowrap;
+}
+
+.about-decor-dots {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-top: 4px;
+}
+
+/* ======================================================
+   2. OUR STORY
+====================================================== */
+
+.about-story {
+  padding: clamp(35px, 4vw, 65px) 0;
+  background: #ffffff;
+}
+
+.about-story-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(25px, 4vw, 55px);
+}
+
+.about-story-image {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.about-story-image > img {
+  width: 100%;
+  height: clamp(320px, 33vw, 460px);
+
+  border-radius: 17px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* STORY DECORATION */
+
+.about-story-decoration {
+  position: absolute;
+  left: 2%;
+  bottom: 5%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: var(--about-pink);
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: clamp(13px, 1.5vw, 18px);
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+
+  transform: rotate(-17deg);
+}
+
+.about-story-decoration svg {
+  margin-top: 5px;
+}
+
+.about-dream-heart {
+  font-size: 24px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+.about-dream-dots {
+  display: block;
+
+  margin-top: 3px;
+  margin-left: 26px;
+
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1;
+
+  color: #ff4f87;
+}
+
+/* STORY TEXT */
+
+.about-story-content {
+  min-width: 0;
+  text-align: left;
+}
+
+.about-story-content h2 {
+  color: #101076;
+
+  font-size: clamp(25px, 3vw, 42px);
+  font-weight: 700;
+  line-height: 1.25;
+
+  margin: 15px 0 25px;
+}
+
+.about-story-content p {
+  color: #303030;
+
+  font-size: clamp(12px, 1.05vw, 14px);
+  line-height: 1.8;
+
+  margin: 0 0 20px;
+}
+
+/* ======================================================
+   3. MISSION & VALUES
+====================================================== */
+
+.about-mission {
+  width: 100%;
+  background: #ffd3dc;
+
+  padding:
+    clamp(40px, 4vw, 65px)
+    0
+    clamp(45px, 5vw, 75px);
+}
+
+.about-section-heading {
+  text-align: center;
+  margin-bottom: clamp(24px, 3vw, 35px);
+}
+
+.about-section-heading h2 {
+  color: #111111;
+
+  font-size: clamp(26px, 3.5vw, 46px);
+  font-weight: 700;
+  line-height: 1.2;
+
+  margin: 5px 0 12px;
+}
+
+.about-section-heading > p {
+  max-width: 650px;
+  margin: 0 auto;
+
+  color: #707070;
+  font-size: clamp(11px, 1.1vw, 14px);
+  line-height: 1.6;
+}
+
+/* FOUR VALUE CARDS */
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: clamp(15px, 2.5vw, 35px);
+  width: 94%;
+  margin: 0 auto;
+}
+
+.about-value-card {
+  min-width: 0;
+  min-height: 190px;
+
+  padding: clamp(18px, 2vw, 25px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background: #ffffff;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.about-value-card > svg {
+  color: var(--about-pink);
+  flex-shrink: 0;
+  margin-bottom: 14px;
+}
+
+.about-value-card h3 {
+  color: #111111;
+
+  font-size: clamp(13px, 1.3vw, 17px);
+  font-weight: 600;
+  line-height: 1.35;
+
+  margin: 0 0 8px;
+}
+
+.about-value-card p {
+  max-width: 190px;
+  color: #292929;
+
+  font-size: clamp(10px, 0.85vw, 12px);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ======================================================
+   4. WHY CHOOSE US
+====================================================== */
+
+.about-why {
+  padding: clamp(40px, 5vw, 70px) 0;
+  background: #f4f4f4;
+}
+
+.about-why-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  align-items: center;
+  gap: clamp(30px, 5vw, 65px);
+}
+
+.about-why-content {
+  position: relative;
+  min-width: 0;
+  text-align: left;
+}
+
+.about-why-content h2 {
+  color: #111111;
+
+  font-size: clamp(25px, 2.9vw, 37px);
+  font-weight: 700;
+  line-height: 1.35;
+
+  margin: 12px 0 16px;
+}
+
+.about-why-content > p {
+  max-width: 440px;
+
+  color: #6d6d6d;
+  font-size: clamp(12px, 1.05vw, 14px);
+  line-height: 1.7;
+
+  margin: 0 0 16px;
+}
+
+/* CHECKLIST */
+
+.about-why-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-why-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: #777777;
+  font-size: clamp(11px, 1vw, 13px);
+  line-height: 1.5;
+
+  margin-bottom: 10px;
+}
+
+.about-why-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+
+  color: #ffffff;
+  background: var(--about-pink);
+  border-radius: 50%;
+}
+
+/* WHY CHOOSE DECORATION */
+
+.about-why-decoration {
+  position: absolute;
+  right: 4%;
+  bottom: 8%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: var(--about-pink);
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: clamp(16px, 2vw, 25px);
+  line-height: 1.1;
+
+  transform: rotate(-12deg);
+}
+
+.about-why-decoration svg {
+  margin-top: 9px;
+}
+
+/* WHY CHOOSE IMAGE */
+
+.about-why-image {
+  width: 100%;
+  min-width: 0;
+}
+
+.about-why-image img {
+  width: 100%;
+  height: clamp(260px, 29vw, 340px);
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 18px;
+}
+
+/* ======================================================
+   5. CELEBRATION CTA
+====================================================== */
+
+.about-cta-section {
+  padding: clamp(25px, 3vw, 40px) 4%;
+  background-color: #fff6f8;
+}
+
+.about-cta-banner {
+  width: 100%;
+  min-height: 190px;
+
+  padding: 25px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  border-radius: 14px;
+  text-align: center;
+}
+
+.about-cta-banner h2 {
+  color: #111111;
+
+  font-size: clamp(23px, 3vw, 35px);
+  font-weight: 700;
+  line-height: 1.2;
+
+  margin: 0 0 10px;
+}
+
+.about-cta-banner p {
+  max-width: 600px;
+  color: #777777;
+
+  font-size: clamp(11px, 1vw, 13px);
+  font-weight: 500;
+  line-height: 1.6;
+
+  margin: 0 0 19px;
+}
+
+.about-cta-banner button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+
+  color: #ffffff;
+  background: var(--about-pink);
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.about-cta-banner button:hover {
+  background: #e63268;
+  transform: translateY(-2px);
+}
+
+.about-cta-banner button:focus-visible {
+  outline: 2px solid #b72559;
+  outline-offset: 3px;
+}
+
+/* ======================================================
+   6. LARGE MONITORS - 1920px AND ABOVE
+====================================================== */
+
+@media (min-width: 1920px) {
+  .about-page {
+    --about-max-width: 1320px;
+  }
+
+  .about-hero {
+    max-height: 600px;
+    min-height: 420px;
+  }
+
+  .about-hero-content {
+    left: max(7%, calc((100% - 1320px) / 2));
+    max-width: 520px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 42px;
+  }
+
+  .about-hero-content p {
+    font-size: 14px;
+  }
+
+  .about-story-image > img {
+    height: 490px;
+  }
+
+  .about-value-card {
+    min-height: 210px;
+  }
+}
+
+/* ======================================================
+   7. ULTRAWIDE / 4K - 2560px AND ABOVE
+====================================================== */
+
+@media (min-width: 2560px) {
+  .about-page {
+    --about-max-width: 1440px;
+  }
+
+  .about-hero {
+    min-height: 500px;
+    max-height: 650px;
+  }
+
+  .about-hero-content {
+    left: max(9%, calc((100% - 1440px) / 2));
+  }
+
+  .about-hero-decoration {
+    font-size: 24px;
+  }
+
+  .about-container {
+    width: min(1440px, 88%);
+  }
+
+  .about-story-image > img {
+    height: 520px;
+  }
+
+  .about-why-image img {
+    height: 400px;
+  }
+
+  .about-cta-banner {
+    min-height: 240px;
+  }
+}
+
+/* ======================================================
+   8. SMALL LAPTOPS - 1024px TO 1279px
+====================================================== */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .about-container {
+    width: 94%;
+  }
+
+  .about-hero-content {
+    left: 7%;
+    width: 43%;
+  }
+
+  .about-hero-content h1 {
+    font-size: 32px;
+  }
+
+  .about-story-layout {
+    gap: 30px;
+  }
+
+  .about-story-image > img {
+    height: 390px;
+  }
+
+  .about-story-content h2 {
+    font-size: 33px;
+    margin-bottom: 18px;
+  }
+
+  .about-story-content p {
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .about-values-grid {
+    width: 100%;
+    gap: 18px;
+  }
+
+  .about-value-card {
+    padding: 22px 14px;
+  }
+
+  .about-why-layout {
+    gap: 35px;
+  }
+}
+
+/* ======================================================
+   9. TABLETS - 768px TO 1023px
+====================================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about-container {
+    width: 94%;
+  }
+
+  /* HERO */
+
+  .about-hero {
+    aspect-ratio: auto;
+    height: 340px;
+    min-height: 340px;
+  }
+
+  .about-hero-content {
+    top: 14%;
+    left: 7%;
+
+    width: 46%;
+    max-width: 390px;
+  }
+
+  .about-small-title {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .about-hero-content h1 {
+    font-size: clamp(24px, 3vw, 31px);
+    line-height: 1.25;
+  }
+
+  .about-hero-content p {
+    font-size: 10px;
+    line-height: 1.55;
+  }
+
+  .about-hero-decoration {
+    left: 56%;
+    top: 31%;
+    font-size: 14px;
+  }
+
+  /* STORY */
+
+  .about-story {
+    padding: 45px 0;
+  }
+
+  .about-story-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 25px;
+  }
+
+  .about-story-image > img {
+    height: 360px;
+  }
+
+  .about-story-content h2 {
+    font-size: 26px;
+    margin: 10px 0 14px;
+  }
+
+  .about-story-content p {
+    font-size: 11px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+  /* MISSION */
+
+  .about-values-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .about-value-card {
+    min-height: 175px;
+  }
+
+  .about-value-card h3 {
+    font-size: 16px;
+  }
+
+  .about-value-card p {
+    font-size: 11px;
+  }
+
+  /* WHY CHOOSE */
+
+  .about-why-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  .about-why-content h2 {
+    font-size: 26px;
+  }
+
+  .about-why-content > p {
+    font-size: 11px;
+  }
+
+  .about-why-image img {
+    height: 300px;
+  }
+
+  .about-why-decoration {
+    right: 0;
+    bottom: 2%;
+    font-size: 17px;
+  }
+}
+
+/* ======================================================
+   10. LARGE PHONES / SMALL TABLETS
+   481px TO 767px
+====================================================== */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .about-container {
+    width: 92%;
+  }
+
+  /* HERO */
+
+  .about-hero {
+    aspect-ratio: auto;
+    height: 330px;
+    min-height: 330px;
+  }
+
+  .about-hero-content {
+    top: 13%;
+    left: 6%;
+    width: 53%;
+  }
+
+  .about-small-title {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .about-hero-content h1 {
+    font-size: clamp(19px, 3.5vw, 25px);
+    line-height: 1.23;
+  }
+
+  .about-hero-content p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .about-hero-decoration {
+    left: 61%;
+    top: 37%;
+    font-size: 11px;
+  }
+
+  /* STORY STACKS VERTICALLY */
+
+  .about-story-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-story-image > img {
+    height: 330px;
+  }
+
+  .about-story-content h2 {
+    font-size: 30px;
+  }
+
+  .about-story-content p {
+    font-size: 12px;
+  }
+
+  /* VALUES */
+
+  .about-values-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .about-value-card {
+    min-height: 175px;
+  }
+
+  /* WHY CHOOSE STACKS */
+
+  .about-why-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about-why-content h2 {
+    font-size: 29px;
+  }
+
+  .about-why-image img {
+    height: 310px;
+  }
+
+  .about-why-decoration {
+    right: 10%;
+    font-size: 19px;
+  }
+
+  /* CTA */
+
+  .about-cta-banner {
+    min-height: 210px;
+  }
+}
+
+/* ======================================================
+   11. MOBILE - 361px TO 480px
+====================================================== */
+
+@media (min-width: 361px) and (max-width: 480px) {
+  .about-container {
+    width: 92%;
+  }
+
+  /* HERO */
+
+  .about-hero {
+    aspect-ratio: auto;
+    height: 315px;
+    min-height: 315px;
+  }
+
+  .about-hero-content {
+    top: 10%;
+    left: 5%;
+    width: 59%;
+  }
+
+  .about-small-title {
+    font-size: 11px;
+    margin-bottom: 7px;
+  }
+
+  .about-hero-content h1 {
+    font-size: clamp(17px, 4.5vw, 21px);
+    line-height: 1.22;
+    margin-bottom: 9px;
+  }
+
+  .about-hero-content p {
+    font-size: 9px;
+    line-height: 1.5;
+  }
+
+  .about-hero-decoration {
+    left: 66%;
+    top: 40%;
+    font-size: 9px;
+  }
+
+  .about-decor-dots {
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  /* STORY */
+
+  .about-story {
+    padding: 35px 0;
+  }
+
+  .about-story-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .about-story-image > img {
+    height: 265px;
+    border-radius: 12px;
+  }
+
+  .about-story-decoration {
+    font-size: 13px;
+  }
+
+  .about-story-content h2 {
+    font-size: 27px;
+    margin: 10px 0 17px;
+  }
+
+  .about-story-content p {
+    font-size: 12px;
+    line-height: 1.75;
+    margin-bottom: 15px;
+  }
+
+  /* MISSION */
+
+  .about-mission {
+    padding: 38px 0 45px;
+  }
+
+  .about-section-heading h2 {
+    font-size: 29px;
+  }
+
+  .about-section-heading > p {
+    font-size: 11px;
+  }
+
+  .about-values-grid {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .about-value-card {
+    min-height: 180px;
+    padding: 20px 11px;
+  }
+
+  .about-value-card > svg {
+    width: 29px;
+    height: 29px;
+  }
+
+  .about-value-card h3 {
+    font-size: 13px;
+  }
+
+  .about-value-card p {
+    font-size: 10px;
+  }
+
+  /* WHY CHOOSE */
+
+  .about-why {
+    padding: 38px 0;
+  }
+
+  .about-why-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about-why-content h2 {
+    font-size: 26px;
+  }
+
+  .about-why-content > p {
+    font-size: 12px;
+  }
+
+  .about-why-list li {
+    font-size: 11px;
+  }
+
+  .about-why-decoration {
+    right: 5%;
+    bottom: 4%;
+    font-size: 16px;
+  }
+
+  .about-why-image img {
+    height: 240px;
+  }
+
+  /* CTA */
+
+  .about-cta-section {
+    padding: 25px 3%;
+  }
+
+  .about-cta-banner {
+    min-height: 220px;
+    padding: 28px 18px;
+  }
+
+  .about-cta-banner h2 {
+    font-size: 24px;
+  }
+
+  .about-cta-banner p {
+    max-width: 290px;
+    font-size: 11px;
+  }
+}
+
+/* ======================================================
+   12. SMALL MOBILE - 320px TO 360px
+====================================================== */
+
+@media (max-width: 360px) {
+  .about-container {
+    width: 92%;
+  }
+
+  /* HERO */
+
+  .about-hero {
+    aspect-ratio: auto;
+    height: 300px;
+    min-height: 300px;
+  }
+
+  .about-hero-content {
+    top: 9%;
+    left: 5%;
+    width: 63%;
+  }
+
+  .about-small-title {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+
+  .about-hero-content h1 {
+    font-size: 16px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .about-hero-content p {
+    font-size: 8px;
+    line-height: 1.45;
+  }
+
+  .about-hero-decoration {
+    left: 70%;
+    top: 42%;
+    font-size: 8px;
+  }
+
+  .about-decor-dots {
+    font-size: 7px;
+  }
+
+  /* STORY */
+
+  .about-story {
+    padding: 30px 0;
+  }
+
+  .about-story-layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .about-story-image > img {
+    height: 230px;
+    border-radius: 10px;
+  }
+
+  .about-story-decoration {
+    font-size: 12px;
+  }
+
+  .about-story-content h2 {
+    font-size: 24px;
+    margin: 10px 0 15px;
+  }
+
+  .about-story-content p {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  /* MISSION */
+
+  .about-mission {
+    padding: 35px 0;
+  }
+
+  .about-section-heading h2 {
+    font-size: 26px;
+  }
+
+  .about-section-heading > p {
+    font-size: 11px;
+  }
+
+  .about-values-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .about-value-card {
+    min-height: 150px;
+    padding: 20px 15px;
+  }
+
+  .about-value-card h3 {
+    font-size: 15px;
+  }
+
+  .about-value-card p {
+    font-size: 11px;
+  }
+
+  /* WHY CHOOSE */
+
+  .about-why {
+    padding: 35px 0;
+  }
+
+  .about-why-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .about-why-content h2 {
+    font-size: 24px;
+  }
+
+  .about-why-content > p {
+    font-size: 11px;
+  }
+
+  .about-why-list li {
+    font-size: 11px;
+  }
+
+  /* Move decoration into normal flow */
+  .about-why-decoration {
+    position: static;
+    width: fit-content;
+
+    margin: 20px auto 0;
+    font-size: 17px;
+  }
+
+  .about-why-image img {
+    height: 220px;
+  }
+
+  /* CTA */
+
+  .about-cta-section {
+    padding: 22px 3%;
+  }
+
+  .about-cta-banner {
+    min-height: 210px;
+    padding: 25px 15px;
+  }
+
+  .about-cta-banner h2 {
+    font-size: 21px;
+  }
+
+  .about-cta-banner p {
+    font-size: 10px;
+  }
+
+  .about-cta-banner button {
+    font-size: 11px;
+    padding: 10px 16px;
+  }
+}
+
+/* ======================================================
+   13. LANDSCAPE PHONES
+====================================================== */
+
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 950px) {
+  .about-hero {
+    aspect-ratio: auto;
+    height: 310px;
+    min-height: 310px;
+  }
+
+  .about-hero-content {
+    top: 10%;
+  }
+
+  .about-hero-content h1 {
+    font-size: clamp(19px, 3vw, 26px);
+  }
+
+  .about-hero-decoration {
+    top: 33%;
+  }
+}
+
+/* ======================================================
+   14. REDUCED MOTION / ACCESSIBILITY
+====================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-cta-banner button {
+    transition: none;
+  }
+
+  .about-cta-banner button:hover {
+    transform: none;
+  }
+}

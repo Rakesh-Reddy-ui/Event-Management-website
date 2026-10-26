@@ -1,0 +1,831 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap");
+
+/* ==========================================
+   1. GLOBAL NAVBAR
+========================================== */
+
+.navbar {
+  --nav-pink: #ed3f6b;
+  --nav-dark: #222222;
+  --nav-background: #ffffff;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  height: 70px;
+
+  background-color: var(--nav-background);
+  border-bottom: 1px solid #eeeeee;
+
+  font-family: "Akaya Kanadaka", cursive;
+}
+
+.navbar *,
+.navbar *::before,
+.navbar *::after {
+  box-sizing: border-box;
+}
+
+/* ==========================================
+   2. NAVBAR CONTAINER
+========================================== */
+
+.navbar .nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: min(1200px, 92%);
+  height: 100%;
+  margin: 0 auto;
+
+  gap: 24px;
+}
+
+/* ==========================================
+   3. LOGO
+========================================== */
+
+.navbar .logo {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+  min-width: 0;
+  flex-shrink: 0;
+
+  text-decoration: none;
+}
+
+/* CIRCULAR LOGO */
+
+.navbar .logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+
+  background-color: #111111;
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* LOGO TEXT */
+
+.navbar .logo-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+
+  line-height: 1.1;
+}
+
+.navbar .logo-text strong {
+  color: #222222;
+
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.navbar .logo-text span {
+  color: #888888;
+
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1;
+
+  margin-top: 4px;
+}
+
+/* ==========================================
+   4. DESKTOP NAVIGATION LINKS
+========================================== */
+
+.navbar .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: clamp(12px, 1.7vw, 24px);
+
+  min-width: 0;
+}
+
+.navbar .nav-links a {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 8px 0;
+
+  color: #333333;
+  text-decoration: none;
+
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: clamp(18px, 1.8vw, 25px);
+  font-weight: 400;
+  line-height: 1.1;
+
+  white-space: nowrap;
+
+  transition: color 0.2s ease;
+}
+
+/* ==========================================
+   5. NAVIGATION HOVER
+========================================== */
+
+.navbar .nav-links a:hover {
+  color: var(--nav-pink);
+}
+
+/* UNDERLINE */
+
+.navbar .nav-links a::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  background-color: var(--nav-pink);
+  border-radius: 5px;
+
+  transition: width 0.25s ease;
+}
+
+.navbar .nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ==========================================
+   6. PERMANENT ACTIVE PAGE
+========================================== */
+
+/*
+  React Router NavLink automatically
+  applies the active class.
+
+  The active page remains highlighted
+  after moving the mouse cursor away.
+*/
+
+.navbar .nav-links a.active,
+.navbar .nav-links a[aria-current="page"] {
+  color: var(--nav-pink);
+}
+
+.navbar .nav-links a.active::after,
+.navbar .nav-links a[aria-current="page"]::after {
+  width: 100%;
+  background-color: var(--nav-pink);
+}
+
+/* ==========================================
+   7. PLAN YOUR EVENT BUTTON
+========================================== */
+
+.navbar .nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  min-height: 36px;
+  padding: 11px 20px;
+
+  border: none;
+  border-radius: 25px;
+
+  background-color: var(--nav-pink);
+  color: #ffffff;
+
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+
+  text-decoration: none;
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar .nav-button:hover {
+  background-color: #d92f5b;
+  color: #ffffff;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 15px rgba(237, 63, 107, 0.25);
+}
+
+.navbar .nav-button:active {
+  transform: translateY(0);
+}
+
+/* ==========================================
+   8. HAMBURGER BUTTON
+========================================== */
+
+.navbar .hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  color: #222222;
+
+  font-family: Arial, sans-serif;
+  font-size: 27px;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.navbar .hamburger:hover {
+  color: var(--nav-pink);
+}
+
+/* ==========================================
+   9. ACCESSIBILITY
+========================================== */
+
+.navbar a:focus-visible,
+.navbar button:focus-visible {
+  outline: 2px solid var(--nav-pink);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ==========================================
+   10. SMALL LAPTOPS
+   1024px - 1279px
+========================================== */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+  .navbar .nav-container {
+    width: 96%;
+    gap: 12px;
+  }
+
+  .navbar .nav-links {
+    gap: clamp(9px, 1.1vw, 15px);
+  }
+
+  .navbar .nav-links a {
+    font-size: clamp(16px, 1.5vw, 19px);
+  }
+
+  .navbar .logo {
+    gap: 6px;
+  }
+
+  .navbar .logo-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 19px;
+  }
+
+  .navbar .logo-text strong {
+    font-size: 16px;
+  }
+
+  .navbar .logo-text span {
+    font-size: 9px;
+  }
+
+  .navbar .nav-button {
+    padding: 10px 13px;
+    font-size: 12px;
+  }
+}
+
+/* ==========================================
+   11. TABLETS + MOBILE MENU
+   UP TO 1023px
+========================================== */
+
+@media (max-width: 1023px) {
+
+  .navbar {
+    height: 66px;
+  }
+
+  .navbar .nav-container {
+    width: 92%;
+    gap: 15px;
+  }
+
+  /* LOGO */
+
+  .navbar .logo-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 20px;
+  }
+
+  .navbar .logo-text strong {
+    font-size: 18px;
+  }
+
+  .navbar .logo-text span {
+    font-size: 10px;
+  }
+
+  /* HAMBURGER */
+
+  .navbar .hamburger {
+    display: inline-flex;
+
+    margin-left: auto;
+    flex-shrink: 0;
+    z-index: 1002;
+  }
+
+  /* HIDE DESKTOP CTA */
+
+  .navbar .nav-button {
+    display: none;
+  }
+
+  /* DROPDOWN NAVIGATION */
+
+  .navbar .nav-links {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    gap: 0;
+
+    max-height: calc(100dvh - 66px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    padding: 12px 5% 18px;
+
+    background-color: #ffffff;
+
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+
+    box-shadow:
+      0 10px 22px rgba(0, 0, 0, 0.09);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-10px);
+
+    transition:
+      opacity 0.25s ease,
+      visibility 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  /* OPEN MENU */
+
+  .navbar .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0);
+  }
+
+  /* MOBILE / TABLET LINKS */
+
+  .navbar .nav-links a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    min-height: 46px;
+
+    padding: 13px 14px;
+
+    font-size: 19px;
+    line-height: 1.3;
+    color: #333333;
+
+    border-bottom: 1px solid #f1f1f1;
+    border-radius: 5px;
+  }
+
+  .navbar .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  /* REMOVE DESKTOP UNDERLINE */
+
+  .navbar .nav-links a::after,
+  .navbar .nav-links a:hover::after,
+  .navbar .nav-links a.active::after,
+  .navbar .nav-links a[aria-current="page"]::after {
+    display: none;
+  }
+
+  /* HOVER */
+
+  .navbar .nav-links a:hover {
+    color: var(--nav-pink);
+    background: #fff4f7;
+  }
+
+  /* PERMANENT ACTIVE PAGE ON MOBILE */
+
+  .navbar .nav-links a.active,
+  .navbar .nav-links a[aria-current="page"] {
+    color: var(--nav-pink);
+
+    background-color: #fff4f7;
+    border-left: 3px solid var(--nav-pink);
+
+    padding-left: 11px;
+  }
+}
+
+/* ==========================================
+   12. SMALL TABLETS / LARGE PHONES
+   600px - 767px
+========================================== */
+
+@media (min-width: 600px) and (max-width: 767px) {
+
+  .navbar {
+    height: 65px;
+  }
+
+  .navbar .nav-container {
+    width: 92%;
+  }
+
+  .navbar .logo-icon {
+    width: 37px;
+    height: 37px;
+  }
+
+  .navbar .logo-text strong {
+    font-size: 17px;
+  }
+
+  .navbar .nav-links {
+    max-height: calc(100dvh - 65px);
+    padding: 10px 5% 15px;
+  }
+
+  .navbar .nav-links a {
+    font-size: 18px;
+    min-height: 44px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+/* ==========================================
+   13. MOBILE PHONES
+   360px - 599px
+========================================== */
+
+@media (min-width: 360px) and (max-width: 599px) {
+
+  .navbar {
+    height: 60px;
+  }
+
+  .navbar .nav-container {
+    width: 90%;
+    gap: 10px;
+  }
+
+  .navbar .logo {
+    gap: 7px;
+  }
+
+  .navbar .logo-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 18px;
+  }
+
+  .navbar .logo-text strong {
+    font-size: 16px;
+  }
+
+  .navbar .logo-text span {
+    font-size: 8px;
+    margin-top: 3px;
+  }
+
+  .navbar .hamburger {
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+  }
+
+  /* MOBILE MENU */
+
+  .navbar .nav-links {
+    max-height: calc(100dvh - 60px);
+    padding: 8px 5% 15px;
+  }
+
+  .navbar .nav-links a {
+    min-height: 44px;
+    padding: 12px 12px;
+
+    font-size: 17px;
+  }
+
+  .navbar .nav-links a.active,
+  .navbar .nav-links a[aria-current="page"] {
+    padding-left: 9px;
+  }
+}
+
+/* ==========================================
+   14. EXTRA SMALL MOBILE PHONES
+   BELOW 360px
+========================================== */
+
+@media (max-width: 359px) {
+
+  .navbar {
+    height: 58px;
+  }
+
+  .navbar .nav-container {
+    width: 92%;
+    gap: 8px;
+  }
+
+  .navbar .logo {
+    gap: 6px;
+  }
+
+  .navbar .logo-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 17px;
+  }
+
+  .navbar .logo-text strong {
+    font-size: 15px;
+  }
+
+  .navbar .logo-text span {
+    font-size: 7px;
+  }
+
+  .navbar .hamburger {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+  }
+
+  .navbar .nav-links {
+    max-height: calc(100dvh - 58px);
+    padding: 8px 4% 12px;
+  }
+
+  .navbar .nav-links a {
+    min-height: 44px;
+    padding: 11px 12px;
+    font-size: 16px;
+  }
+
+  .navbar .nav-links a.active,
+  .navbar .nav-links a[aria-current="page"] {
+    padding-left: 9px;
+  }
+}
+
+/* ==========================================
+   15. LARGE DESKTOP MONITORS
+   1440px - 1919px
+========================================== */
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+
+  .navbar {
+    height: 75px;
+  }
+
+  .navbar .nav-container {
+    width: min(1320px, 90%);
+    gap: 28px;
+  }
+
+  .navbar .nav-links {
+    gap: 25px;
+  }
+
+  .navbar .nav-links a {
+    font-size: 25px;
+  }
+
+  .navbar .logo-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
+
+  .navbar .logo-text strong {
+    font-size: 19px;
+  }
+
+  .navbar .nav-button {
+    font-size: 15px;
+    padding: 12px 22px;
+  }
+}
+
+/* ==========================================
+   16. FULL HD / ULTRAWIDE MONITORS
+   1920px AND ABOVE
+========================================== */
+
+@media (min-width: 1920px) {
+
+  .navbar {
+    height: 82px;
+  }
+
+  .navbar .nav-container {
+    width: min(1400px, 88%);
+    gap: 35px;
+  }
+
+  .navbar .nav-links {
+    gap: 28px;
+  }
+
+  .navbar .nav-links a {
+    font-size: 27px;
+  }
+
+  .navbar .logo-icon {
+    width: 47px;
+    height: 47px;
+    font-size: 24px;
+  }
+
+  .navbar .logo-text strong {
+    font-size: 21px;
+  }
+
+  .navbar .logo-text span {
+    font-size: 11px;
+  }
+
+  .navbar .nav-button {
+    min-height: 42px;
+    padding: 13px 26px;
+    font-size: 16px;
+  }
+}
+
+/* ==========================================
+   17. 4K MONITORS
+   2560px AND ABOVE
+========================================== */
+
+@media (min-width: 2560px) {
+
+  .navbar {
+    height: 90px;
+  }
+
+  .navbar .nav-container {
+    width: min(1500px, 85%);
+    gap: 40px;
+  }
+
+  .navbar .nav-links {
+    gap: 30px;
+  }
+
+  .navbar .nav-links a {
+    font-size: 29px;
+  }
+
+  .navbar .logo-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 27px;
+  }
+
+  .navbar .logo-text strong {
+    font-size: 23px;
+  }
+
+  .navbar .nav-button {
+    font-size: 17px;
+    padding: 14px 28px;
+  }
+}
+
+/* ==========================================
+   18. LANDSCAPE PHONES
+========================================== */
+
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 1023px) {
+
+  .navbar .nav-links {
+    max-height: calc(100dvh - 60px);
+    overflow-y: auto;
+  }
+
+  .navbar .nav-links a {
+    min-height: 40px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+}
+
+/* ==========================================
+   19. TOUCH DEVICES
+========================================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .navbar .hamburger {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .navbar .nav-links a {
+    min-height: 44px;
+  }
+
+  .navbar .nav-button {
+    min-height: 44px;
+  }
+
+  .navbar .nav-button:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* ==========================================
+   20. REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .navbar .nav-links,
+  .navbar .nav-links a,
+  .navbar .nav-links a::after,
+  .navbar .hamburger,
+  .navbar .nav-button {
+    transition: none;
+  }
+}

@@ -1,0 +1,1032 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ========================================
+   1. FOOTER GLOBAL
+======================================== */
+
+.website-footer {
+  --footer-pink: #ff477e;
+  --footer-white: #ffffff;
+  --footer-muted: #bdbdbd;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  background: #000000;
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  padding: 45px 0 0;
+  text-align: left;
+}
+
+.website-footer *,
+.website-footer *::before,
+.website-footer *::after {
+  box-sizing: border-box;
+}
+
+.website-footer a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.website-footer a:focus-visible {
+  outline: 2px solid #ff477e;
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+/* ========================================
+   2. FOOTER CONTAINER
+   DEFAULT DESKTOP - 4 COLUMNS
+======================================== */
+
+.website-footer .footer-container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(0, 0.9fr)
+    minmax(0, 1fr)
+    minmax(0, 1.1fr);
+
+  column-gap: 38px;
+  row-gap: 30px;
+
+  align-items: start;
+}
+
+/* ========================================
+   3. COMPANY INFORMATION
+======================================== */
+
+.website-footer .footer-company {
+  min-width: 0;
+  text-align: left;
+}
+
+/* BRAND */
+
+.website-footer .footer-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 10px;
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* LOGO WRAPPER */
+
+.website-footer .footer-logo {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+/* LOGO CIRCLE */
+
+.website-footer .footer-logo .logo-icon {
+  width: 65px;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background-color: #111111;
+  color: #ffffff;
+
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: 28px;
+  line-height: 1;
+}
+
+/* IF YOUR LOGO IS AN IMAGE */
+
+.website-footer .footer-logo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+/* BRAND TEXT */
+
+.website-footer .footer-brand-name {
+  min-width: 0;
+}
+
+.website-footer .footer-brand-name h2 {
+  margin: 0;
+
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.website-footer .footer-brand-name span {
+  display: block;
+
+  color: #dddddd;
+
+  font-size: 9px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* COMPANY DESCRIPTION */
+
+.website-footer .footer-description {
+  max-width: 250px;
+
+  margin: 18px 0 0;
+
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  text-align: left;
+}
+
+/* ========================================
+   4. COLUMN HEADINGS
+======================================== */
+
+.website-footer .footer-column,
+.website-footer .footer-contact {
+  min-width: 0;
+  text-align: left;
+}
+
+.website-footer .footer-column h3,
+.website-footer .footer-contact h3 {
+  font-family: "Akaya Kanadaka", cursive;
+
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.2;
+
+  text-align: left;
+  margin: 0 0 12px;
+}
+
+/* ========================================
+   5. QUICK LINKS & SERVICES
+======================================== */
+
+.website-footer .footer-column ul {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+
+  text-align: left;
+}
+
+.website-footer .footer-column li {
+  margin: 0 0 5px;
+  padding: 0;
+  text-align: left;
+}
+
+.website-footer .footer-column li a {
+  display: inline-block;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35;
+
+  text-align: left;
+
+  transition: color 0.2s ease;
+}
+
+.website-footer .footer-column li a:hover {
+  color: #ff477e;
+}
+
+/* ========================================
+   6. CONTACT DETAILS
+======================================== */
+
+.website-footer .footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 14px;
+}
+
+.website-footer .footer-contact-list a,
+.website-footer .footer-address {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 10px;
+
+  min-width: 0;
+  max-width: 100%;
+
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  overflow-wrap: anywhere;
+}
+
+.website-footer .footer-contact-list svg,
+.website-footer .footer-address svg {
+  width: 15px;
+  height: 15px;
+
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.website-footer .footer-contact-list a:hover {
+  color: #ff477e;
+}
+
+/* ========================================
+   7. SOCIAL MEDIA ICONS
+======================================== */
+
+.website-footer .footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.website-footer .footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.website-footer .footer-socials a svg {
+  width: 15px;
+  height: 15px;
+}
+
+.website-footer .footer-socials a:hover {
+  color: #ff477e;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   8. COPYRIGHT
+======================================== */
+
+.website-footer .footer-bottom {
+  width: min(1200px, 92%);
+  margin: 35px auto 0;
+  padding: 15px 0;
+
+  border-top: 1px solid #242424;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  gap: 12px 20px;
+
+  color: #bdbdbd;
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.website-footer .footer-bottom a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.website-footer .footer-bottom a:hover {
+  color: #ff477e;
+}
+
+/* ========================================
+   9. SMALL LAPTOP
+   1024px - 1279px
+======================================== */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+  .website-footer {
+    padding-top: 42px;
+  }
+
+  .website-footer .footer-container {
+    width: 94%;
+
+    grid-template-columns:
+      minmax(0, 1.35fr)
+      minmax(0, 0.85fr)
+      minmax(0, 1fr)
+      minmax(0, 1.15fr);
+
+    column-gap: 22px;
+    row-gap: 25px;
+  }
+
+  .website-footer .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .website-footer .footer-logo .logo-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 25px;
+  }
+
+  .website-footer .footer-brand-name h2 {
+    font-size: 21px;
+  }
+
+  .website-footer .footer-description {
+    font-size: 10px;
+    max-width: 240px;
+  }
+
+  .website-footer .footer-column h3,
+  .website-footer .footer-contact h3 {
+    font-size: 21px;
+  }
+
+  .website-footer .footer-column li a {
+    font-size: 15px;
+  }
+
+  .website-footer .footer-contact-list a,
+  .website-footer .footer-address {
+    font-size: 10px;
+  }
+
+  .website-footer .footer-bottom {
+    width: 94%;
+  }
+}
+
+/* ========================================
+   10. TABLET
+   768px - 1023px
+======================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .website-footer {
+    padding-top: 35px;
+  }
+
+  /* THREE COLUMN TABLET LAYOUT */
+
+  .website-footer .footer-container {
+    width: 92%;
+    max-width: 920px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    column-gap: 24px;
+    row-gap: 26px;
+
+    align-items: start;
+  }
+
+  /* COMPANY OCCUPIES FULL TOP ROW */
+
+  .website-footer .footer-company {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .website-footer .footer-brand {
+    gap: 10px;
+  }
+
+  .website-footer .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .website-footer .footer-logo .logo-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+
+  .website-footer .footer-brand-name h2 {
+    font-size: 23px;
+  }
+
+  .website-footer .footer-description {
+    max-width: 600px;
+    margin-top: 10px;
+
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  /* QUICK LINKS, SERVICES, CONTACT */
+
+  .website-footer .footer-column,
+  .website-footer .footer-contact {
+    min-width: 0;
+  }
+
+  .website-footer .footer-column h3,
+  .website-footer .footer-contact h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+  }
+
+  .website-footer .footer-column li {
+    margin-bottom: 5px;
+  }
+
+  .website-footer .footer-column li a {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
+  .website-footer .footer-contact-list {
+    gap: 13px;
+  }
+
+  .website-footer .footer-contact-list a,
+  .website-footer .footer-address {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .website-footer .footer-socials {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .website-footer .footer-socials a {
+    width: 26px;
+    height: 26px;
+  }
+
+  .website-footer .footer-bottom {
+    width: 92%;
+    margin-top: 30px;
+    font-size: 10px;
+  }
+}
+
+/* ========================================
+   11. SMALL TABLET
+   600px - 767px
+======================================== */
+
+@media (min-width: 600px) and (max-width: 767px) {
+
+  .website-footer {
+    padding-top: 35px;
+  }
+
+  .website-footer .footer-container {
+    width: 92%;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 25px;
+    row-gap: 28px;
+
+    align-items: start;
+  }
+
+  /* COMPANY FULL WIDTH */
+
+  .website-footer .footer-company {
+    grid-column: 1 / -1;
+  }
+
+  .website-footer .footer-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .website-footer .footer-logo .logo-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+
+  .website-footer .footer-brand-name h2 {
+    font-size: 22px;
+  }
+
+  .website-footer .footer-description {
+    max-width: 500px;
+    margin-top: 12px;
+    font-size: 11px;
+  }
+
+  .website-footer .footer-column,
+  .website-footer .footer-contact {
+    min-width: 0;
+  }
+
+  .website-footer .footer-column h3,
+  .website-footer .footer-contact h3 {
+    font-size: 21px;
+  }
+
+  .website-footer .footer-column li {
+    margin-bottom: 6px;
+  }
+
+  .website-footer .footer-column li a {
+    font-size: 16px;
+  }
+
+  .website-footer .footer-contact-list a,
+  .website-footer .footer-address {
+    font-size: 11px;
+  }
+
+  .website-footer .footer-socials {
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .website-footer .footer-bottom {
+    width: 92%;
+    margin-top: 30px;
+  }
+}
+
+/* ========================================
+   12. MOBILE
+   360px - 599px
+======================================== */
+
+@media (min-width: 360px) and (max-width: 599px) {
+
+  .website-footer {
+    padding-top: 32px;
+  }
+
+  .website-footer .footer-container {
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    row-gap: 25px;
+  }
+
+  .website-footer .footer-company,
+  .website-footer .footer-column,
+  .website-footer .footer-contact {
+    grid-column: auto;
+    min-width: 0;
+  }
+
+  /* LOGO */
+
+  .website-footer .footer-logo {
+    width: 58px;
+    height: 58px;
+  }
+
+  .website-footer .footer-logo .logo-icon {
+    width: 54px;
+    height: 54px;
+    font-size: 23px;
+  }
+
+  .website-footer .footer-brand-name h2 {
+    font-size: 22px;
+  }
+
+  .website-footer .footer-brand-name span {
+    font-size: 9px;
+  }
+
+  .website-footer .footer-description {
+    max-width: 350px;
+    margin-top: 13px;
+
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  /* HEADINGS */
+
+  .website-footer .footer-column h3,
+  .website-footer .footer-contact h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  /* LINKS */
+
+  .website-footer .footer-column li {
+    margin-bottom: 6px;
+  }
+
+  .website-footer .footer-column li a {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  /* CONTACT */
+
+  .website-footer .footer-contact-list {
+    gap: 13px;
+  }
+
+  .website-footer .footer-contact-list a,
+  .website-footer .footer-address {
+    font-size: 12px;
+  }
+
+  .website-footer .footer-contact-list svg,
+  .website-footer .footer-address svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* SOCIAL MEDIA */
+
+  .website-footer .footer-socials {
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .website-footer .footer-socials a svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* COPYRIGHT */
+
+  .website-footer .footer-bottom {
+    width: 90%;
+
+    margin-top: 28px;
+    padding: 18px 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    font-size: 10px;
+  }
+}
+
+/* ========================================
+   13. EXTRA SMALL MOBILE
+   BELOW 360px
+======================================== */
+
+@media (max-width: 359px) {
+
+  .website-footer {
+    padding-top: 28px;
+  }
+
+  .website-footer .footer-container {
+    width: 90%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    row-gap: 22px;
+  }
+
+  .website-footer .footer-company,
+  .website-footer .footer-column,
+  .website-footer .footer-contact {
+    grid-column: auto;
+  }
+
+  .website-footer .footer-brand {
+    gap: 8px;
+  }
+
+  .website-footer .footer-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .website-footer .footer-logo .logo-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 21px;
+  }
+
+  .website-footer .footer-brand-name h2 {
+    font-size: 19px;
+  }
+
+  .website-footer .footer-brand-name span {
+    font-size: 8px;
+  }
+
+  .website-footer .footer-description {
+    font-size: 11px;
+    margin-top: 12px;
+    line-height: 1.65;
+  }
+
+  .website-footer .footer-column h3,
+  .website-footer .footer-contact h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+
+  .website-footer .footer-column li {
+    margin-bottom: 5px;
+  }
+
+  .website-footer .footer-column li a {
+    font-size: 16px;
+  }
+
+  .website-footer .footer-contact-list {
+    gap: 12px;
+  }
+
+  .website-footer .footer-contact-list a,
+  .website-footer .footer-address {
+    font-size: 11px;
+  }
+
+  .website-footer .footer-socials {
+    gap: 16px;
+    margin-top: 18px;
+  }
+
+  .website-footer .footer-bottom {
+    width: 90%;
+
+    margin-top: 25px;
+    padding: 16px 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    font-size: 10px;
+  }
+}
+
+/* ========================================
+   14. LARGE DESKTOP
+   1440px - 1919px
+======================================== */
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+
+  .website-footer {
+    padding-top: 55px;
+  }
+
+  .website-footer .footer-container {
+    width: min(1320px, 90%);
+    column-gap: 45px;
+  }
+
+  .website-footer .footer-logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  .website-footer .footer-logo .logo-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+  }
+
+  .website-footer .footer-brand-name h2 {
+    font-size: 25px;
+  }
+
+  .website-footer .footer-description {
+    max-width: 290px;
+    font-size: 12px;
+  }
+
+  .website-footer .footer-column h3,
+  .website-footer .footer-contact h3 {
+    font-size: 25px;
+  }
+
+  .website-footer .footer-column li a {
+    font-size: 18px;
+  }
+
+  .website-footer .footer-contact-list a,
+  .website-footer .footer-address {
+    font-size: 12px;
+  }
+
+  .website-footer .footer-bottom {
+    width: min(1320px, 90%);
+    margin-top: 42px;
+    font-size: 11px;
+  }
+}
+
+/* ========================================
+   15. FULL HD / ULTRAWIDE
+   1920px - 2559px
+======================================== */
+
+@media (min-width: 1920px) {
+
+  .website-footer {
+    padding-top: 60px;
+  }
+
+  .website-footer .footer-container {
+    width: min(1400px, 85%);
+    column-gap: 55px;
+  }
+
+  .website-footer .footer-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .website-footer .footer-logo .logo-icon {
+    width: 75px;
+    height: 75px;
+    font-size: 32px;
+  }
+
+  .website-footer .footer-brand-name h2 {
+    font-size: 27px;
+  }
+
+  .website-footer .footer-brand-name span {
+    font-size: 11px;
+  }
+
+  .website-footer .footer-description {
+    max-width: 330px;
+    font-size: 13px;
+  }
+
+  .website-footer .footer-column h3,
+  .website-footer .footer-contact h3 {
+    font-size: 27px;
+  }
+
+  .website-footer .footer-column li a {
+    font-size: 19px;
+  }
+
+  .website-footer .footer-contact-list a,
+  .website-footer .footer-address {
+    font-size: 14px;
+  }
+
+  .website-footer .footer-socials a svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .website-footer .footer-bottom {
+    width: min(1400px, 85%);
+    margin-top: 45px;
+    font-size: 12px;
+  }
+}
+
+/* ========================================
+   16. 4K AND LARGE MONITORS
+   2560px AND ABOVE
+======================================== */
+
+@media (min-width: 2560px) {
+
+  .website-footer .footer-container {
+    width: min(1500px, 80%);
+    column-gap: 60px;
+  }
+
+  .website-footer .footer-bottom {
+    width: min(1500px, 80%);
+  }
+
+  .website-footer .footer-brand-name h2 {
+    font-size: 29px;
+  }
+
+  .website-footer .footer-description {
+    font-size: 14px;
+  }
+
+  .website-footer .footer-column h3,
+  .website-footer .footer-contact h3 {
+    font-size: 29px;
+  }
+
+  .website-footer .footer-column li a {
+    font-size: 20px;
+  }
+
+  .website-footer .footer-contact-list a,
+  .website-footer .footer-address {
+    font-size: 15px;
+  }
+}
+
+/* ========================================
+   17. TOUCH SCREEN ACCESSIBILITY
+======================================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .website-footer .footer-column li a {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 40px;
+  }
+
+  .website-footer .footer-socials a {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .website-footer .footer-socials a:hover {
+    transform: none;
+  }
+}
+
+/* ========================================
+   18. REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .website-footer .footer-column li a,
+  .website-footer .footer-socials a {
+    transition: none;
+  }
+
+  .website-footer .footer-socials a:hover {
+    transform: none;
+  }
+}

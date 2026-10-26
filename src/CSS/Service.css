@@ -1,0 +1,1713 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* =====================================================
+   1. GLOBAL
+===================================================== */
+
+.services-page {
+  --services-pink: #ff477e;
+  --services-dark: #171717;
+  --services-muted: #666666;
+  --services-max-width: 1200px;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow-x: clip;
+  background: #ffffff;
+  color: var(--services-dark);
+
+  font-family: "Poppins", sans-serif;
+}
+
+.services-page *,
+.services-page *::before,
+.services-page *::after {
+  box-sizing: border-box;
+}
+
+.services-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.services-page button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.services-page-container {
+  width: min(var(--services-max-width), 94%);
+  margin-inline: auto;
+  min-width: 0;
+}
+
+/* =====================================================
+   2. HERO BANNER
+===================================================== */
+
+.services-page-hero {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 3 / 1;
+  min-height: 290px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+
+  overflow: hidden;
+}
+
+.services-page-hero-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.services-page-hero-content {
+  position: absolute;
+  z-index: 2;
+
+  left: 7%;
+  top: 20%;
+
+  width: 46%;
+  max-width: 470px;
+  min-width: 0;
+
+  text-align: left;
+}
+
+.services-page-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--services-pink);
+  font-size: clamp(12px, 1.5vw, 19px);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.services-page-hero-content h1 {
+  color: #111111;
+
+  font-size: clamp(22px, 2.8vw, 38px);
+  line-height: 1.35;
+  font-weight: 700;
+
+  margin: 0 0 12px;
+  overflow-wrap: break-word;
+}
+
+.services-page-hero-content p {
+  color: var(--services-muted);
+
+  font-size: clamp(10px, 0.95vw, 13px);
+  line-height: 1.65;
+
+  max-width: 450px;
+  margin: 0;
+}
+
+/* =====================================================
+   3. HERO DECORATIVE TEXT
+===================================================== */
+
+.services-page-hero-decoration {
+  position: absolute;
+  z-index: 3;
+
+  left: 52%;
+  top: 31%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: rotate(-17deg);
+
+  color: var(--services-pink);
+  font-family: "Akaya Kanadaka", cursive;
+  font-size: clamp(12px, 1.5vw, 19px);
+  line-height: 1.05;
+
+  pointer-events: none;
+}
+
+.services-page-hero-decoration span {
+  display: block;
+}
+
+.services-page-hero-decoration svg {
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+/* =====================================================
+   4. COMMON SECTION HEADINGS
+===================================================== */
+
+.services-page-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-page-heading > span {
+  display: block;
+
+  color: var(--services-pink);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  margin-bottom: 8px;
+}
+
+.services-page-heading h2 {
+  color: #151515;
+
+  font-size: clamp(23px, 2.5vw, 32px);
+  font-weight: 700;
+  line-height: 1.3;
+
+  margin: 0 0 10px;
+}
+
+.services-page-heading p {
+  max-width: 660px;
+  margin: 0 auto;
+
+  color: #555555;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* =====================================================
+   5. OUR SERVICES SECTION
+===================================================== */
+
+.services-page-catalog {
+  width: 100%;
+  padding: 35px 0 60px;
+
+  background: #ffffff;
+}
+
+/* FOUR COLUMN GRID */
+
+.services-page-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 55px 18px;
+}
+
+/* SERVICE CARD */
+
+.services-page-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  background: #ffffe7;
+  border-radius: 15px;
+
+  overflow: hidden;
+
+  transition: transform 0.25s ease;
+}
+
+.services-page-card:hover {
+  transform: translateY(-4px);
+}
+
+/* CARD IMAGE */
+
+.services-page-card-image {
+  position: relative;
+
+  width: 100%;
+  height: 150px;
+}
+
+.services-page-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+/* PINK CIRCULAR ICON */
+
+.services-page-card-icon {
+  position: absolute;
+  z-index: 2;
+
+  left: 12px;
+  bottom: -17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  background: #ffffff;
+  color: var(--services-pink);
+
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.services-page-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* CARD CONTENT */
+
+.services-page-card-content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  min-height: 155px;
+  padding: 29px 16px 15px;
+
+  text-align: left;
+}
+
+.services-page-card-content h3 {
+  color: #111111;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  margin: 0 0 9px;
+}
+
+.services-page-card-content p {
+  max-width: 220px;
+
+  color: #777777;
+  font-size: 11px;
+  line-height: 1.6;
+
+  margin: 0 0 25px;
+}
+
+/* BOTTOM RIGHT ARROW */
+
+.services-page-card-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  align-self: flex-end;
+  flex-shrink: 0;
+
+  width: 30px;
+  height: 30px;
+
+  margin-top: auto;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+  color: var(--services-pink);
+
+  transition: transform 0.2s ease;
+}
+
+.services-page-card-arrow:hover {
+  transform: translateX(3px);
+}
+
+/* =====================================================
+   6. WHY CHOOSE OUR SERVICES
+===================================================== */
+
+.services-page-benefits {
+  position: relative;
+
+  width: 100%;
+  padding: 38px 0 52px;
+
+  background-color: #fff1f5;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+.services-page-benefits .services-page-heading {
+  margin-bottom: 28px;
+}
+
+.services-page-benefits .services-page-heading h2 {
+  font-size: clamp(24px, 2.4vw, 32px);
+}
+
+/* SIX BENEFIT CARDS */
+
+.services-page-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+
+  gap: 18px;
+
+  width: 90%;
+  margin: 0 auto;
+}
+
+.services-page-benefit-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 0;
+  min-height: 160px;
+
+  padding: 19px 12px;
+
+  background: #ffffff;
+  border-radius: 14px;
+
+  text-align: center;
+}
+
+.services-page-benefit-card > svg {
+  flex-shrink: 0;
+
+  color: var(--services-pink);
+  margin-bottom: 12px;
+}
+
+.services-page-benefit-card h3 {
+  color: #151515;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  margin: 0 0 9px;
+}
+
+.services-page-benefit-card p {
+  color: #333333;
+
+  font-size: 10px;
+  line-height: 1.6;
+
+  margin: 0;
+}
+
+/* =====================================================
+   7. OUR PROCESS
+===================================================== */
+
+.services-page-process {
+  width: 100%;
+
+  background: #ffffff;
+  padding: 30px 0 40px;
+}
+
+.services-page-process .services-page-heading {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.services-page-process .services-page-heading > span {
+  color: var(--services-pink);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 5px;
+}
+
+.services-page-process .services-page-heading h2 {
+  color: #111111;
+
+  font-size: clamp(22px, 2vw, 27px);
+  font-weight: 700;
+  line-height: 1.2;
+
+  margin: 0 0 7px;
+}
+
+.services-page-process .services-page-heading p {
+  color: #333333;
+
+  font-size: 11px;
+  line-height: 1.5;
+
+  margin: 0 auto;
+}
+
+/* DECORATION + PROCESS STEPS */
+
+.services-process-layout {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+
+  align-items: center;
+  gap: 20px;
+}
+
+/* LEFT DECORATIVE TEXT */
+
+.services-process-decoration {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  color: var(--services-pink);
+  font-family: "Akaya Kanadaka", cursive;
+
+  font-size: 18px;
+  line-height: 1.05;
+  text-align: left;
+
+  transform: rotate(-17deg);
+}
+
+.services-process-dream-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.services-process-decoration svg {
+  align-self: center;
+  margin-top: 4px;
+
+  color: var(--services-pink);
+}
+
+/* FIVE PROCESS STEPS */
+
+.services-page-process .services-page-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 5px;
+  width: 100%;
+  min-width: 0;
+}
+
+/* INDIVIDUAL STEP */
+
+.services-page-process .services-page-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex: 1 1 0;
+  min-width: 0;
+
+  text-align: center;
+}
+
+.services-page-process .services-page-step > svg {
+  width: 22px;
+  height: 22px;
+
+  flex-shrink: 0;
+
+  color: var(--services-pink);
+  margin-bottom: 7px;
+}
+
+.services-page-process .services-page-step h3 {
+  color: #111111;
+
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  margin: 0 0 4px;
+}
+
+.services-page-process .services-page-step p {
+  color: #333333;
+
+  font-size: 9px;
+  line-height: 1.45;
+
+  max-width: 120px;
+  margin: 0;
+}
+
+/* PINK ARROWS BETWEEN STEPS */
+
+.services-page-process .services-page-step-arrow {
+  flex-shrink: 0;
+
+  width: 32px;
+  height: 22px;
+
+  color: var(--services-pink);
+  margin-top: 5px;
+}
+
+/* =====================================================
+   8. CUSTOM PACKAGE CTA
+===================================================== */
+
+.services-page-cta {
+  width: 100%;
+  min-height: 170px;
+
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fff6f8;
+  text-align: center;
+}
+
+.services-page-cta h2 {
+  color: #111111;
+
+  font-size: clamp(22px, 2.5vw, 30px);
+  font-weight: 700;
+  line-height: 1.3;
+
+  margin: 0 0 9px;
+}
+
+.services-page-cta p {
+  max-width: 650px;
+
+  color: #333333;
+  font-size: 12px;
+  line-height: 1.6;
+
+  margin: 0 0 16px;
+}
+
+.services-page-cta button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  padding: 11px 25px;
+
+  background: var(--services-pink);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 25px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: background 0.2s ease;
+}
+
+.services-page-cta button:hover {
+  background: #e63268;
+}
+
+/* ACCESSIBILITY */
+
+.services-page button:focus-visible {
+  outline: 2px solid #b72559;
+  outline-offset: 3px;
+}
+
+/* =====================================================
+   9. SMALL LAPTOPS
+   1024px - 1279px
+===================================================== */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+  .services-page-container {
+    width: 94%;
+  }
+
+  /* HERO */
+
+  .services-page-hero-content {
+    left: 7%;
+    top: 17%;
+
+    width: 47%;
+  }
+
+  .services-page-hero-content h1 {
+    font-size: 30px;
+  }
+
+  .services-page-hero-decoration {
+    left: 55%;
+    top: 35%;
+    font-size: 15px;
+  }
+
+  /* SERVICE CARDS */
+
+  .services-page-grid {
+    gap: 35px 15px;
+  }
+
+  .services-page-card-image {
+    height: 140px;
+  }
+
+  .services-page-card-content {
+    padding: 27px 13px 14px;
+  }
+
+  .services-page-card-content h3 {
+    font-size: 14px;
+  }
+
+  .services-page-card-content p {
+    font-size: 10px;
+  }
+
+  /* BENEFITS */
+
+  .services-page-benefits-grid {
+    width: 100%;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .services-page-benefit-card {
+    min-height: 160px;
+  }
+
+  .services-page-benefit-card h3 {
+    font-size: 13px;
+  }
+
+  .services-page-benefit-card p {
+    font-size: 11px;
+  }
+
+  /* PROCESS */
+
+  .services-process-layout {
+    grid-template-columns: 115px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .services-process-decoration {
+    font-size: 15px;
+  }
+
+  .services-page-process .services-page-step-arrow {
+    width: 22px;
+  }
+}
+
+/* =====================================================
+   10. TABLETS
+   768px - 1023px
+===================================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .services-page-container {
+    width: 94%;
+  }
+
+  /* HERO */
+
+  .services-page-hero {
+    aspect-ratio: auto;
+
+    height: 335px;
+    min-height: 335px;
+  }
+
+  .services-page-hero-content {
+    top: 17%;
+    left: 6%;
+
+    width: 47%;
+    max-width: 410px;
+  }
+
+  .services-page-label {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .services-page-hero-content h1 {
+    font-size: clamp(25px, 3.2vw, 31px);
+    line-height: 1.3;
+  }
+
+  .services-page-hero-content p {
+    font-size: 11px;
+  }
+
+  .services-page-hero-decoration {
+    top: 34%;
+    left: 58%;
+    font-size: 13px;
+  }
+
+  /* SECTION HEADING */
+
+  .services-page-heading {
+    margin-bottom: 30px;
+  }
+
+  .services-page-heading h2 {
+    font-size: 28px;
+  }
+
+  /* SERVICE GRID */
+
+  .services-page-catalog {
+    padding: 40px 0 50px;
+  }
+
+  .services-page-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px 15px;
+  }
+
+  .services-page-card-image {
+    height: 150px;
+  }
+
+  .services-page-card-content {
+    min-height: 155px;
+  }
+
+  .services-page-card-content h3 {
+    font-size: 15px;
+  }
+
+  /* BENEFITS */
+
+  .services-page-benefits {
+    padding: 40px 0 50px;
+  }
+
+  .services-page-benefits-grid {
+    width: 100%;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .services-page-benefit-card {
+    min-height: 170px;
+    padding: 20px 15px;
+  }
+
+  .services-page-benefit-card h3 {
+    font-size: 13px;
+  }
+
+  .services-page-benefit-card p {
+    font-size: 11px;
+  }
+
+  /* PROCESS: GRID INSTEAD OF COMPRESSED ARROWS */
+
+  .services-page-process {
+    padding: 40px 0;
+  }
+
+  .services-process-layout {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .services-process-decoration {
+    justify-self: center;
+    font-size: 17px;
+  }
+
+  .services-page-process .services-page-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 22px 16px;
+    align-items: stretch;
+  }
+
+  .services-page-process .services-page-step {
+    padding: 18px 12px;
+
+    background: #fff6f8;
+    border-radius: 12px;
+  }
+
+  .services-page-process .services-page-step h3 {
+    font-size: 13px;
+  }
+
+  .services-page-process .services-page-step p {
+    font-size: 11px;
+    max-width: 220px;
+  }
+
+  .services-page-process .services-page-step-arrow {
+    display: none;
+  }
+
+  /* CTA */
+
+  .services-page-cta {
+    padding: 35px 20px;
+  }
+
+  .services-page-cta h2 {
+    font-size: 28px;
+  }
+}
+
+/* =====================================================
+   11. LARGE PHONES / SMALL TABLETS
+   600px - 767px
+===================================================== */
+
+@media (min-width: 600px) and (max-width: 767px) {
+
+  .services-page-container {
+    width: 92%;
+  }
+
+  /* HERO */
+
+  .services-page-hero {
+    aspect-ratio: auto;
+
+    height: 330px;
+    min-height: 330px;
+  }
+
+  .services-page-hero-content {
+    left: 6%;
+    top: 13%;
+
+    width: 52%;
+  }
+
+  .services-page-label {
+    font-size: 12px;
+  }
+
+  .services-page-hero-content h1 {
+    font-size: 24px;
+  }
+
+  .services-page-hero-content p {
+    font-size: 10px;
+  }
+
+  .services-page-hero-decoration {
+    left: 63%;
+    top: 40%;
+    font-size: 11px;
+  }
+
+  /* SERVICE GRID */
+
+  .services-page-catalog {
+    padding: 35px 0 45px;
+  }
+
+  .services-page-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 15px;
+  }
+
+  .services-page-card-image {
+    height: 165px;
+  }
+
+  /* BENEFIT GRID */
+
+  .services-page-benefits-grid {
+    width: 100%;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .services-page-benefit-card {
+    padding: 20px 12px;
+  }
+
+  /* PROCESS */
+
+  .services-process-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .services-process-decoration {
+    justify-self: center;
+  }
+
+  .services-page-process .services-page-steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+  }
+
+  .services-page-process .services-page-step {
+    padding: 18px 12px;
+
+    background: #fff6f8;
+    border-radius: 12px;
+  }
+
+  .services-page-process .services-page-step h3 {
+    font-size: 13px;
+  }
+
+  .services-page-process .services-page-step p {
+    font-size: 11px;
+    max-width: 230px;
+  }
+
+  .services-page-process .services-page-step-arrow {
+    display: none;
+  }
+}
+
+/* =====================================================
+   12. MOBILE PHONES
+   360px - 599px
+===================================================== */
+
+@media (min-width: 360px) and (max-width: 599px) {
+
+  .services-page-container {
+    width: 92%;
+  }
+
+  /* HERO */
+
+  .services-page-hero {
+    aspect-ratio: auto;
+
+    height: 320px;
+    min-height: 320px;
+  }
+
+  .services-page-hero-content {
+    top: 10%;
+    left: 5%;
+
+    width: 62%;
+  }
+
+  .services-page-label {
+    font-size: 11px;
+    margin-bottom: 7px;
+  }
+
+  .services-page-hero-content h1 {
+    font-size: clamp(19px, 5vw, 24px);
+    line-height: 1.25;
+    margin-bottom: 9px;
+  }
+
+  .services-page-hero-content p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .services-page-hero-decoration {
+    left: 71%;
+    top: 43%;
+
+    font-size: 9px;
+  }
+
+  .services-page-hero-decoration svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* HEADINGS */
+
+  .services-page-heading {
+    margin-bottom: 25px;
+  }
+
+  .services-page-heading > span {
+    font-size: 12px;
+  }
+
+  .services-page-heading h2 {
+    font-size: 24px;
+  }
+
+  .services-page-heading p {
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  /* SERVICE CATALOG */
+
+  .services-page-catalog {
+    padding: 30px 0 40px;
+  }
+
+  .services-page-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px 10px;
+  }
+
+  .services-page-card {
+    border-radius: 11px;
+  }
+
+  .services-page-card-image {
+    height: 120px;
+  }
+
+  .services-page-card-icon {
+    left: 9px;
+    bottom: -14px;
+
+    width: 32px;
+    height: 32px;
+  }
+
+  .services-page-card-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .services-page-card-content {
+    min-height: 165px;
+    padding: 24px 10px 12px;
+  }
+
+  .services-page-card-content h3 {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .services-page-card-content p {
+    font-size: 10px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  /* BENEFITS */
+
+  .services-page-benefits {
+    padding: 35px 0 40px;
+  }
+
+  .services-page-benefits-grid {
+    width: 100%;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .services-page-benefit-card {
+    min-height: 170px;
+    padding: 19px 10px;
+  }
+
+  .services-page-benefit-card > svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .services-page-benefit-card h3 {
+    font-size: 12px;
+  }
+
+  .services-page-benefit-card p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  /* PROCESS */
+
+  .services-page-process {
+    padding: 35px 0;
+  }
+
+  .services-process-layout {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .services-process-decoration {
+    justify-self: center;
+    font-size: 16px;
+  }
+
+  .services-page-process .services-page-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .services-page-process .services-page-step {
+    padding: 20px 18px;
+
+    background: #fff6f8;
+    border-radius: 12px;
+  }
+
+  .services-page-process .services-page-step > svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .services-page-process .services-page-step h3 {
+    font-size: 14px;
+  }
+
+  .services-page-process .services-page-step p {
+    max-width: 320px;
+
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .services-page-process .services-page-step-arrow {
+    display: none;
+  }
+
+  /* CTA */
+
+  .services-page-cta {
+    min-height: 190px;
+    padding: 35px 18px;
+  }
+
+  .services-page-cta h2 {
+    font-size: 24px;
+  }
+
+  .services-page-cta p {
+    font-size: 11px;
+  }
+
+  .services-page-cta button {
+    min-height: 44px;
+    padding: 11px 20px;
+
+    font-size: 11px;
+  }
+}
+
+/* =====================================================
+   13. EXTRA SMALL MOBILES
+   BELOW 360px
+===================================================== */
+
+@media (max-width: 359px) {
+
+  .services-page-container {
+    width: 92%;
+  }
+
+  /* HERO */
+
+  .services-page-hero {
+    aspect-ratio: auto;
+
+    height: 325px;
+    min-height: 325px;
+  }
+
+  .services-page-hero-content {
+    top: 9%;
+    left: 5%;
+
+    width: 65%;
+  }
+
+  .services-page-label {
+    font-size: 10px;
+  }
+
+  .services-page-hero-content h1 {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .services-page-hero-content p {
+    font-size: 10px;
+    line-height: 1.45;
+  }
+
+  .services-page-hero-decoration {
+    left: 74%;
+    top: 44%;
+    font-size: 8px;
+  }
+
+  .services-page-hero-decoration svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* HEADINGS */
+
+  .services-page-heading {
+    margin-bottom: 22px;
+  }
+
+  .services-page-heading > span {
+    font-size: 11px;
+  }
+
+  .services-page-heading h2 {
+    font-size: 22px;
+  }
+
+  .services-page-heading p {
+    font-size: 11px;
+  }
+
+  /* SERVICE GRID */
+
+  .services-page-catalog {
+    padding: 28px 0 35px;
+  }
+
+  .services-page-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .services-page-card-image {
+    height: 195px;
+  }
+
+  .services-page-card-content {
+    min-height: 135px;
+    padding: 27px 14px 14px;
+  }
+
+  .services-page-card-content h3 {
+    font-size: 15px;
+  }
+
+  .services-page-card-content p {
+    max-width: 100%;
+    font-size: 11px;
+    margin-bottom: 14px;
+  }
+
+  /* BENEFITS */
+
+  .services-page-benefits {
+    padding: 30px 0 35px;
+  }
+
+  .services-page-benefits-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .services-page-benefit-card {
+    min-height: 135px;
+    padding: 20px 15px;
+  }
+
+  .services-page-benefit-card h3 {
+    font-size: 14px;
+  }
+
+  .services-page-benefit-card p {
+    font-size: 11px;
+  }
+
+  /* PROCESS */
+
+  .services-page-process {
+    padding: 30px 0;
+  }
+
+  .services-process-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .services-process-decoration {
+    justify-self: center;
+    font-size: 15px;
+  }
+
+  .services-page-process .services-page-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+  .services-page-process .services-page-step {
+    padding: 20px 15px;
+
+    background: #fff6f8;
+    border-radius: 12px;
+  }
+
+  .services-page-process .services-page-step h3 {
+    font-size: 14px;
+  }
+
+  .services-page-process .services-page-step p {
+    font-size: 11px;
+    max-width: 100%;
+  }
+
+  .services-page-process .services-page-step-arrow {
+    display: none;
+  }
+
+  /* CTA */
+
+  .services-page-cta {
+    padding: 35px 15px;
+  }
+
+  .services-page-cta h2 {
+    font-size: 22px;
+  }
+
+  .services-page-cta p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .services-page-cta button {
+    min-height: 44px;
+    padding: 11px 18px;
+    font-size: 11px;
+  }
+}
+
+/* =====================================================
+   14. LARGE DESKTOPS
+   1440px - 1919px
+===================================================== */
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+
+  .services-page {
+    --services-max-width: 1300px;
+  }
+
+  .services-page-hero-content {
+    max-width: 520px;
+  }
+
+  .services-page-hero-content h1 {
+    font-size: 40px;
+  }
+
+  .services-page-hero-content p {
+    font-size: 14px;
+  }
+
+  .services-page-grid {
+    gap: 55px 22px;
+  }
+
+  .services-page-card-image {
+    height: 175px;
+  }
+
+  .services-page-card-content {
+    min-height: 170px;
+  }
+
+  .services-page-card-content h3 {
+    font-size: 17px;
+  }
+
+  .services-page-card-content p {
+    font-size: 12px;
+  }
+
+  .services-page-benefits-grid {
+    width: 100%;
+    gap: 20px;
+  }
+}
+
+/* =====================================================
+   15. FULL HD / ULTRAWIDE MONITORS
+   1920px AND ABOVE
+===================================================== */
+
+@media (min-width: 1920px) {
+
+  .services-page {
+    --services-max-width: 1400px;
+  }
+
+  /* HERO */
+
+  .services-page-hero {
+    min-height: 440px;
+    max-height: 620px;
+  }
+
+  .services-page-hero-content {
+    left: max(9%, calc((100% - 1400px) / 2));
+
+    width: 43%;
+    max-width: 600px;
+  }
+
+  .services-page-label {
+    font-size: 22px;
+  }
+
+  .services-page-hero-content h1 {
+    font-size: 45px;
+  }
+
+  .services-page-hero-content p {
+    max-width: 520px;
+    font-size: 16px;
+  }
+
+  .services-page-hero-decoration {
+    left: 53%;
+    font-size: 24px;
+  }
+
+  /* HEADINGS */
+
+  .services-page-heading h2 {
+    font-size: 38px;
+  }
+
+  .services-page-heading p {
+    font-size: 15px;
+  }
+
+  /* SERVICE CARDS */
+
+  .services-page-grid {
+    gap: 55px 25px;
+  }
+
+  .services-page-card-image {
+    height: 205px;
+  }
+
+  .services-page-card-content {
+    min-height: 180px;
+    padding: 32px 20px 20px;
+  }
+
+  .services-page-card-content h3 {
+    font-size: 19px;
+  }
+
+  .services-page-card-content p {
+    font-size: 13px;
+  }
+
+  /* BENEFITS */
+
+  .services-page-benefits-grid {
+    width: 100%;
+    gap: 22px;
+  }
+
+  .services-page-benefit-card {
+    min-height: 195px;
+    padding: 25px 17px;
+  }
+
+  .services-page-benefit-card h3 {
+    font-size: 14px;
+  }
+
+  .services-page-benefit-card p {
+    font-size: 12px;
+  }
+
+  /* PROCESS */
+
+  .services-process-layout {
+    grid-template-columns: 175px minmax(0, 1fr);
+    gap: 30px;
+  }
+
+  .services-process-decoration {
+    font-size: 22px;
+  }
+
+  .services-page-process .services-page-step h3 {
+    font-size: 13px;
+  }
+
+  .services-page-process .services-page-step p {
+    font-size: 11px;
+    max-width: 150px;
+  }
+
+  /* CTA */
+
+  .services-page-cta {
+    min-height: 220px;
+  }
+
+  .services-page-cta h2 {
+    font-size: 36px;
+  }
+
+  .services-page-cta p {
+    font-size: 15px;
+  }
+}
+
+/* =====================================================
+   16. ULTRAWIDE / 4K MONITORS
+   2560px AND ABOVE
+===================================================== */
+
+@media (min-width: 2560px) {
+
+  .services-page {
+    --services-max-width: 1500px;
+  }
+
+  .services-page-hero {
+    min-height: 540px;
+    max-height: 700px;
+  }
+
+  .services-page-hero-content h1 {
+    font-size: 50px;
+  }
+
+  .services-page-hero-content p {
+    font-size: 18px;
+  }
+
+  .services-page-hero-decoration {
+    font-size: 27px;
+  }
+
+  .services-page-card-image {
+    height: 230px;
+  }
+
+  .services-page-card-content h3 {
+    font-size: 20px;
+  }
+
+  .services-page-benefit-card {
+    min-height: 210px;
+  }
+
+  .services-page-cta {
+    min-height: 250px;
+  }
+
+  .services-page-cta h2 {
+    font-size: 40px;
+  }
+}
+
+/* =====================================================
+   17. LANDSCAPE PHONES
+===================================================== */
+
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 950px) {
+
+  .services-page-hero {
+    aspect-ratio: auto;
+    min-height: 320px;
+    height: 320px;
+  }
+
+  .services-page-hero-content {
+    top: 12%;
+  }
+
+  .services-page-hero-content h1 {
+    font-size: clamp(21px, 3vw, 29px);
+  }
+
+  .services-page-hero-decoration {
+    top: 36%;
+  }
+}
+
+/* =====================================================
+   18. TOUCH SCREEN ACCESSIBILITY
+===================================================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+  .services-page-card-arrow {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .services-page-cta button {
+    min-height: 44px;
+  }
+
+  .services-page-card:hover {
+    transform: none;
+  }
+
+  .services-page-card-arrow:hover {
+    transform: none;
+  }
+}
+
+/* =====================================================
+   19. REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .services-page-card,
+  .services-page-card-arrow,
+  .services-page-cta button {
+    transition: none;
+  }
+
+  .services-page-card:hover,
+  .services-page-card-arrow:hover {
+    transform: none;
+  }
+}
